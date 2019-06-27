@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.omac.org/#"
+     xml:base="http://www.omac.org/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -7,7 +8,16 @@
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://www.omac.org/#"/>
+    <owl:Ontology rdf:about="http://www.omac.org/#">
+        <rdfs:comment>Ontology development: Emilio M. Sanfilippo, University of Tours,
+emiliosanfilippo@gmail.com
+
+Domain expert: Richard Freedman, Haverford College
+
+Contributor: Raffaele Viglianti, University of Maryland</rdfs:comment>
+        <rdfs:comment>This ontology is work in progress about the modeling of musicological data for expressing critical claims about musical works.</rdfs:comment>
+        <rdfs:comment>The ontology is based on some of the core modeling elements of FRBRoo. For the moment, it does not reuse FRBRoo namespaces; this is to be done.</rdfs:comment>
+    </owl:Ontology>
     
 
 
@@ -275,7 +285,7 @@
     <!-- http://www.omac.org/#Expression -->
 
     <owl:Class rdf:about="http://www.omac.org/#Expression">
-        <rdfs:comment>REMINDER: check hasFragment and hasComponent</rdfs:comment>
+        <rdfs:comment>REMINDER: check hasFragment and hasComponent in FRBRoo</rdfs:comment>
     </owl:Class>
     
 
@@ -494,6 +504,55 @@
                 <owl:someValuesFrom rdf:resource="http://www.omac.org/#MusicalWork"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.omac.org/#amplified"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.omac.org/#embellished"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.omac.org/#newCombination"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.omac.org/#newCounterSubject"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.omac.org/#oldCounterSubjectShifted"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.omac.org/#oldCounterSubjectTransposed"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.omac.org/#reduced"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.omac.org/#truncated"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>TO DO: characterize these classes</rdfs:comment>
     </owl:Class>
     
 
@@ -660,15 +719,6 @@
             <rdf:Description rdf:about="http://www.omac.org/#Expression"/>
             <rdf:Description rdf:about="http://www.omac.org/#Person"/>
             <rdf:Description rdf:about="http://www.omac.org/#SimilarityRelationship"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.omac.org/#Claim"/>
-            <rdf:Description rdf:about="http://www.omac.org/#Expression"/>
-            <rdf:Description rdf:about="http://www.omac.org/#Person"/>
-            <rdf:Description rdf:about="http://www.omac.org/#SimilarityRelationship"/>
             <rdf:Description rdf:about="http://www.omac.org/#Work"/>
         </owl:members>
     </rdf:Description>
@@ -683,6 +733,28 @@
             <rdf:Description rdf:about="http://www.omac.org/#Simplification"/>
             <rdf:Description rdf:about="http://www.omac.org/#Truncation"/>
         </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.omac.org/#Antoine_de_Fevin"/>
+            <rdf:Description rdf:about="http://www.omac.org/#Josquin_des_Prez"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.omac.org/#Antoine_de_Fevin"/>
+            <rdf:Description rdf:about="http://www.omac.org/#Josquin_des_Prez"/>
+            <rdf:Description rdf:about="http://www.omac.org/#Peter_Schubert"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.omac.org/#De_Fevin_Missa_Ave_Maria"/>
+            <rdf:Description rdf:about="http://www.omac.org/#De_Pres_Ave_Maria"/>
+        </owl:distinctMembers>
     </rdf:Description>
     
 
