@@ -1,0 +1,1220 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.omac.org/#"
+     xml:base="http://www.omac.org/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:www="http://www.omac.org#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
+    <owl:Ontology rdf:about="http://www.omac.org">
+        <rdfs:comment>Domain expert: Richard Freedman, Haverford College  
+Contributor: Raffaele Viglianti, University of Maryland
+Developer: Emilio M. Sanfilippo, University of Tours</rdfs:comment>
+        <rdfs:comment>The ontology is based on some of the core modeling elements of FRBRoo.</rdfs:comment>
+        <rdfs:comment>This ontology is work in progress about the modeling of musicological data for expressing critical claims about musical works.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.omac.org#R10_hasMember -->
+
+    <owl:ObjectProperty rdf:about="http://www.omac.org#R10_hasMember">
+        <owl:inverseOf rdf:resource="http://www.omac.org#R10_isMemberOf"/>
+        <rdfs:domain rdf:resource="http://www.omac.org#F15_ComplexWork"/>
+        <rdfs:range rdf:resource="http://www.omac.org#F1_Work"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.omac.org#R10_isMemberOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.omac.org#R10_isMemberOf"/>
+    
+
+
+    <!-- http://www.omac.org#R15_hasFragment -->
+
+    <owl:ObjectProperty rdf:about="http://www.omac.org#R15_hasFragment">
+        <owl:inverseOf rdf:resource="http://www.omac.org#R15_isFragmentOf"/>
+        <rdfs:domain rdf:resource="http://www.omac.org#F2_Expression"/>
+        <rdfs:range rdf:resource="http://www.omac.org#F23_ExpressionFragment"/>
+        <rdfs:comment xml:lang="en">This property associates the fragment of an expression and the expression of which it is a fragment.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.omac.org#R15_isFragmentOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.omac.org#R15_isFragmentOf"/>
+    
+
+
+    <!-- http://www.omac.org#R2_hasDerivative -->
+
+    <owl:ObjectProperty rdf:about="http://www.omac.org#R2_hasDerivative">
+        <owl:inverseOf rdf:resource="http://www.omac.org#R2_isDerivativeOf"/>
+        <rdfs:domain rdf:resource="http://www.omac.org#SimilarityRelationship"/>
+        <rdfs:range rdf:resource="http://www.omac.org#MusicalWork"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.omac.org#R2_isDerivativeOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.omac.org#R2_isDerivativeOf">
+        <rdfs:comment>The musical work entitled ‘America’ (F15) R2 is derivative ofthe musical work entitled ‘God save the King’ (F15) R2.1 has type same tune with different lyrics (E55)</rdfs:comment>
+        <rdfs:comment>This property associates an instance of F1 Work which modifies the content of another instance of F1 Work with the latter. The property R2.1 has type of this property allows for specifying the kind of derivation, such as adaptation, summarisation etc.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.omac.org#R3_realisedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.omac.org#R3_realisedIn">
+        <owl:inverseOf rdf:resource="http://www.omac.org#R3_realises"/>
+        <rdfs:domain rdf:resource="http://www.omac.org#F1_Work"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.omac.org#R3_realises -->
+
+    <owl:ObjectProperty rdf:about="http://www.omac.org#R3_realises">
+        <rdfs:domain rdf:resource="http://www.omac.org#F22_SelfContainedExpression"/>
+        <rdfs:range rdf:resource="http://www.omac.org#F1_Work"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.omac.org#R5_hasComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.omac.org#R5_hasComponent">
+        <owl:inverseOf rdf:resource="http://www.omac.org#R5_isComponentOf"/>
+        <rdfs:range rdf:resource="http://www.omac.org#F22_SelfContainedExpression"/>
+        <rdfs:comment>relation holding between expressions</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.omac.org#R5_isComponentOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.omac.org#R5_isComponentOf"/>
+    
+
+
+    <!-- http://www.omac.org#R6_carries -->
+
+    <owl:ObjectProperty rdf:about="http://www.omac.org#R6_carries">
+        <owl:inverseOf rdf:resource="http://www.omac.org#R6_isCarriedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.omac.org#R6_isCarriedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.omac.org#R6_isCarriedBy"/>
+    
+
+
+    <!-- http://www.omac.org#composed -->
+
+    <owl:ObjectProperty rdf:about="http://www.omac.org#composed">
+        <owl:inverseOf rdf:resource="http://www.omac.org#composedBy"/>
+        <rdfs:domain rdf:resource="http://www.omac.org#Composer"/>
+        <rdfs:range rdf:resource="http://www.omac.org#MusicalWork"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.omac.org#composedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.omac.org#composedBy"/>
+    
+
+
+    <!-- http://www.omac.org#dependsOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.omac.org#dependsOn">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.omac.org#Claim"/>
+                    <rdf:Description rdf:about="http://www.omac.org#F10_Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.omac.org#hasModel -->
+
+    <owl:ObjectProperty rdf:about="http://www.omac.org#hasModel">
+        <rdfs:domain rdf:resource="http://www.omac.org#SimilarityRelationship"/>
+        <rdfs:range rdf:resource="http://www.omac.org#MusicalWork"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.omac.org#isAbout -->
+
+    <owl:ObjectProperty rdf:about="http://www.omac.org#isAbout"/>
+    
+
+
+    <!-- http://www.omac.org#madeBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.omac.org#madeBy">
+        <owl:inverseOf rdf:resource="http://www.omac.org#makes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.omac.org#makes -->
+
+    <owl:ObjectProperty rdf:about="http://www.omac.org#makes">
+        <rdfs:domain rdf:resource="http://www.omac.org#Analyst"/>
+        <rdfs:range rdf:resource="http://www.omac.org#Claim"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.omac.org#amplified -->
+
+    <owl:DatatypeProperty rdf:about="http://www.omac.org#amplified"/>
+    
+
+
+    <!-- http://www.omac.org#embellished -->
+
+    <owl:DatatypeProperty rdf:about="http://www.omac.org#embellished"/>
+    
+
+
+    <!-- http://www.omac.org#hasLocalID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.omac.org#hasLocalID">
+        <rdfs:comment xml:lang="en">This data property specifies the ID of a certain entity with respect to a local information systems. E.g., Carlo Gesualdo has ID CESR_person_00036 within and only within the CESR. Other institutions will likely associates different IDs to the same entity</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.omac.org#hasTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.omac.org#hasTitle"/>
+    
+
+
+    <!-- http://www.omac.org#newCombination -->
+
+    <owl:DatatypeProperty rdf:about="http://www.omac.org#newCombination"/>
+    
+
+
+    <!-- http://www.omac.org#newCounterSubject -->
+
+    <owl:DatatypeProperty rdf:about="http://www.omac.org#newCounterSubject"/>
+    
+
+
+    <!-- http://www.omac.org#oldCounterSubjectShifted -->
+
+    <owl:DatatypeProperty rdf:about="http://www.omac.org#oldCounterSubjectShifted"/>
+    
+
+
+    <!-- http://www.omac.org#oldCounterSubjectTransposed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.omac.org#oldCounterSubjectTransposed"/>
+    
+
+
+    <!-- http://www.omac.org#reduced -->
+
+    <owl:DatatypeProperty rdf:about="http://www.omac.org#reduced"/>
+    
+
+
+    <!-- http://www.omac.org#satisfiesUnityCriteria -->
+
+    <owl:DatatypeProperty rdf:about="http://www.omac.org#satisfiesUnityCriteria"/>
+    
+
+
+    <!-- http://www.omac.org#truncated -->
+
+    <owl:DatatypeProperty rdf:about="http://www.omac.org#truncated"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.omac.org#Allusion -->
+
+    <owl:Class rdf:about="http://www.omac.org#Allusion">
+        <rdfs:subClassOf rdf:resource="http://www.omac.org#SimilarityRelationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.omac.org#Analyst -->
+
+    <owl:Class rdf:about="http://www.omac.org#Analyst">
+        <rdfs:subClassOf rdf:resource="http://www.omac.org#F10_Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.omac.org#Arrangement -->
+
+    <owl:Class rdf:about="http://www.omac.org#Arrangement">
+        <rdfs:subClassOf rdf:resource="http://www.omac.org#SimilarityRelationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.omac.org#Claim -->
+
+    <owl:Class rdf:about="http://www.omac.org#Claim"/>
+    
+
+
+    <!-- http://www.omac.org#Collage -->
+
+    <owl:Class rdf:about="http://www.omac.org#Collage">
+        <rdfs:subClassOf rdf:resource="http://www.omac.org#SimilarityRelationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.omac.org#ComplexMusicalWork -->
+
+    <owl:Class rdf:about="http://www.omac.org#ComplexMusicalWork">
+        <rdfs:subClassOf rdf:resource="http://www.omac.org#F15_ComplexWork"/>
+        <rdfs:subClassOf rdf:resource="http://www.omac.org#MusicalWork"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.omac.org#Composer -->
+
+    <owl:Class rdf:about="http://www.omac.org#Composer">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.omac.org#F10_Person"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.omac.org#composed"/>
+                        <owl:someValuesFrom rdf:resource="http://www.omac.org#MusicalWork"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.omac.org#Contrafact -->
+
+    <owl:Class rdf:about="http://www.omac.org#Contrafact">
+        <rdfs:subClassOf rdf:resource="http://www.omac.org#SimilarityRelationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.omac.org#E84_InformationCarrier -->
+
+    <owl:Class rdf:about="http://www.omac.org#E84_InformationCarrier"/>
+    
+
+
+    <!-- http://www.omac.org#Elaboration -->
+
+    <owl:Class rdf:about="http://www.omac.org#Elaboration">
+        <rdfs:subClassOf rdf:resource="http://www.omac.org#Transformation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.omac.org#F10_Person -->
+
+    <owl:Class rdf:about="http://www.omac.org#F10_Person"/>
+    
+
+
+    <!-- http://www.omac.org#F14_IndividualWork -->
+
+    <owl:Class rdf:about="http://www.omac.org#F14_IndividualWork">
+        <rdfs:subClassOf rdf:resource="http://www.omac.org#F1_Work"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.omac.org#F15_ComplexWork -->
+
+    <owl:Class rdf:about="http://www.omac.org#F15_ComplexWork">
+        <rdfs:subClassOf rdf:resource="http://www.omac.org#F1_Work"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.omac.org#F1_Work -->
+
+    <owl:Class rdf:about="http://www.omac.org#F1_Work">
+        <rdfs:comment xml:lang="en">CHECK complex and invidual work, among others, in FRBRoo</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.omac.org#F22_SelfContainedExpression -->
+
+    <owl:Class rdf:about="http://www.omac.org#F22_SelfContainedExpression">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.omac.org#F2_Expression"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.omac.org#R3_realises"/>
+                        <owl:someValuesFrom rdf:resource="http://www.omac.org#F1_Work"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.omac.org#R15_hasFragment"/>
+                        <owl:allValuesFrom rdf:resource="http://www.omac.org#F23_ExpressionFragment"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.omac.org#R5_hasComponent"/>
+                        <owl:allValuesFrom rdf:resource="http://www.omac.org#F22_SelfContainedExpression"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.omac.org#satisfiesUnityCriteria"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://www.omac.org#F23_ExpressionFragment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.omac.org#F23_ExpressionFragment -->
+
+    <owl:Class rdf:about="http://www.omac.org#F23_ExpressionFragment">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.omac.org#F2_Expression"/>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.omac.org#R5_hasComponent"/>
+                                <owl:someValuesFrom rdf:resource="http://www.omac.org#F2_Expression"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.omac.org#R15_hasFragment"/>
+                        <owl:allValuesFrom rdf:resource="http://www.omac.org#F23_ExpressionFragment"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.omac.org#satisfiesUnityCriteria"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.omac.org#F2_Expression -->
+
+    <owl:Class rdf:about="http://www.omac.org#F2_Expression">
+        <rdfs:comment>REMINDER: check hasFragment and hasComponent in FRBRoo</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.omac.org#F54_UtilisedInformationCarrier -->
+
+    <owl:Class rdf:about="http://www.omac.org#F54_UtilisedInformationCarrier">
+        <rdfs:subClassOf rdf:resource="http://www.omac.org#E84_InformationCarrier"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.omac.org#R6_carries"/>
+                <owl:someValuesFrom rdf:resource="http://www.omac.org#F2_Expression"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.omac.org#F5_Item -->
+
+    <owl:Class rdf:about="http://www.omac.org#F5_Item">
+        <rdfs:subClassOf rdf:resource="http://www.omac.org#F54_UtilisedInformationCarrier"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.omac.org#Homage -->
+
+    <owl:Class rdf:about="http://www.omac.org#Homage">
+        <rdfs:subClassOf rdf:resource="http://www.omac.org#SimilarityRelationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.omac.org#Imitation -->
+
+    <owl:Class rdf:about="http://www.omac.org#Imitation">
+        <rdfs:subClassOf rdf:resource="http://www.omac.org#SimilarityRelationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.omac.org#IndividualMusicalWork -->
+
+    <owl:Class rdf:about="http://www.omac.org#IndividualMusicalWork">
+        <rdfs:subClassOf rdf:resource="http://www.omac.org#F14_IndividualWork"/>
+        <rdfs:subClassOf rdf:resource="http://www.omac.org#MusicalWork"/>
+        <skos:altLabel xml:lang="en">CESR_piece_ID</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.omac.org#MechanicalTransformation -->
+
+    <owl:Class rdf:about="http://www.omac.org#MechanicalTransformation">
+        <rdfs:subClassOf rdf:resource="http://www.omac.org#Transformation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.omac.org#MusicalWork -->
+
+    <owl:Class rdf:about="http://www.omac.org#MusicalWork">
+        <rdfs:subClassOf rdf:resource="http://www.omac.org#F1_Work"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.omac.org#composedBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.omac.org#F10_Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.omac.org#NewCombination -->
+
+    <owl:Class rdf:about="http://www.omac.org#NewCombination">
+        <rdfs:subClassOf rdf:resource="http://www.omac.org#Transformation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.omac.org#NonMechanicalTransformation -->
+
+    <owl:Class rdf:about="http://www.omac.org#NonMechanicalTransformation">
+        <rdfs:subClassOf rdf:resource="http://www.omac.org#Transformation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.omac.org#Omission -->
+
+    <owl:Class rdf:about="http://www.omac.org#Omission">
+        <rdfs:subClassOf rdf:resource="http://www.omac.org#SimilarityRelationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.omac.org#Parody -->
+
+    <owl:Class rdf:about="http://www.omac.org#Parody">
+        <rdfs:subClassOf rdf:resource="http://www.omac.org#SimilarityRelationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.omac.org#Pattern -->
+
+    <owl:Class rdf:about="http://www.omac.org#Pattern">
+        <rdfs:subClassOf rdf:resource="http://www.omac.org#F2_Expression"/>
+        <rdfs:comment xml:lang="en">Small building blocks that come in conventional schemas involving pairs of voices</rdfs:comment>
+        <rdfs:comment xml:lang="en">TO DO: is this a fragment or a self-contained expression?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.omac.org#Plagiat -->
+
+    <owl:Class rdf:about="http://www.omac.org#Plagiat">
+        <rdfs:subClassOf rdf:resource="http://www.omac.org#SimilarityRelationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.omac.org#Prolongation -->
+
+    <owl:Class rdf:about="http://www.omac.org#Prolongation">
+        <rdfs:subClassOf rdf:resource="http://www.omac.org#Transformation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.omac.org#Quotation -->
+
+    <owl:Class rdf:about="http://www.omac.org#Quotation">
+        <rdfs:subClassOf rdf:resource="http://www.omac.org#SimilarityRelationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.omac.org#Rendition -->
+
+    <owl:Class rdf:about="http://www.omac.org#Rendition">
+        <rdfs:subClassOf rdf:resource="http://www.omac.org#SimilarityRelationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.omac.org#SelfContainedMusicalExpression -->
+
+    <owl:Class rdf:about="http://www.omac.org#SelfContainedMusicalExpression">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.omac.org#F22_SelfContainedExpression"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.omac.org#R3_realises"/>
+                        <owl:someValuesFrom rdf:resource="http://www.omac.org#MusicalWork"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <skos:altLabel>CESR_source_ID</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.omac.org#SimilarityRelationship -->
+
+    <owl:Class rdf:about="http://www.omac.org#SimilarityRelationship">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.omac.org#R2_hasDerivative"/>
+                <owl:someValuesFrom rdf:resource="http://www.omac.org#MusicalWork"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.omac.org#hasModel"/>
+                <owl:someValuesFrom rdf:resource="http://www.omac.org#MusicalWork"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.omac.org#amplified"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.omac.org#embellished"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.omac.org#newCombination"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.omac.org#newCounterSubject"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.omac.org#oldCounterSubjectShifted"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.omac.org#oldCounterSubjectTransposed"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.omac.org#reduced"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.omac.org#truncated"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>TO DO: characterize these classes</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.omac.org#Simplification -->
+
+    <owl:Class rdf:about="http://www.omac.org#Simplification">
+        <rdfs:subClassOf rdf:resource="http://www.omac.org#Transformation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.omac.org#Transcription -->
+
+    <owl:Class rdf:about="http://www.omac.org#Transcription">
+        <rdfs:subClassOf rdf:resource="http://www.omac.org#SimilarityRelationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.omac.org#Transformation -->
+
+    <owl:Class rdf:about="http://www.omac.org#Transformation">
+        <rdfs:subClassOf rdf:resource="http://www.omac.org#SimilarityRelationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.omac.org#Truncation -->
+
+    <owl:Class rdf:about="http://www.omac.org#Truncation">
+        <rdfs:subClassOf rdf:resource="http://www.omac.org#Transformation"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.omac.org#Antoine_de_Fevin -->
+
+    <owl:NamedIndividual rdf:about="http://www.omac.org#Antoine_de_Fevin">
+        <rdf:type rdf:resource="http://www.omac.org#Composer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.omac.org#CESR_piece_00000192 -->
+
+    <owl:NamedIndividual rdf:about="http://www.omac.org#CESR_piece_00000192">
+        <rdf:type rdf:resource="http://www.omac.org#IndividualMusicalWork"/>
+        <www:R3_realisedIn rdf:resource="http://www.omac.org#CESR_source_000001"/>
+        <www:composedBy rdf:resource="http://www.omac.org#Carlo_Gesualdo"/>
+        <www:hasTitle xml:lang="lt">Ne reminiscaris Domine</www:hasTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.omac.org#CESR_piece_00000761 -->
+
+    <owl:NamedIndividual rdf:about="http://www.omac.org#CESR_piece_00000761">
+        <rdf:type rdf:resource="http://www.omac.org#IndividualMusicalWork"/>
+        <www:hasTitle xml:lang="lt">Kyrie</www:hasTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.omac.org#CESR_piece_00000762 -->
+
+    <owl:NamedIndividual rdf:about="http://www.omac.org#CESR_piece_00000762">
+        <rdf:type rdf:resource="http://www.omac.org#IndividualMusicalWork"/>
+        <www:hasTitle xml:lang="lt">Gloria</www:hasTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.omac.org#CESR_piece_00000763 -->
+
+    <owl:NamedIndividual rdf:about="http://www.omac.org#CESR_piece_00000763">
+        <rdf:type rdf:resource="http://www.omac.org#IndividualMusicalWork"/>
+        <www:hasTitle xml:lang="lt">Credo</www:hasTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.omac.org#CESR_piece_00000764 -->
+
+    <owl:NamedIndividual rdf:about="http://www.omac.org#CESR_piece_00000764">
+        <rdf:type rdf:resource="http://www.omac.org#IndividualMusicalWork"/>
+        <www:hasTitle xml:lang="lt">Sanctus</www:hasTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.omac.org#CESR_piece_00000765 -->
+
+    <owl:NamedIndividual rdf:about="http://www.omac.org#CESR_piece_00000765">
+        <rdf:type rdf:resource="http://www.omac.org#IndividualMusicalWork"/>
+        <www:hasTitle xml:lang="lt">Pleni sunt</www:hasTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.omac.org#CESR_piece_00000766 -->
+
+    <owl:NamedIndividual rdf:about="http://www.omac.org#CESR_piece_00000766">
+        <rdf:type rdf:resource="http://www.omac.org#IndividualMusicalWork"/>
+        <www:hasTitle xml:lang="lt">Osanna</www:hasTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.omac.org#CESR_piece_00000767 -->
+
+    <owl:NamedIndividual rdf:about="http://www.omac.org#CESR_piece_00000767">
+        <rdf:type rdf:resource="http://www.omac.org#IndividualMusicalWork"/>
+        <www:hasTitle xml:lang="lt">Benedictus</www:hasTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.omac.org#CESR_piece_00000768 -->
+
+    <owl:NamedIndividual rdf:about="http://www.omac.org#CESR_piece_00000768">
+        <rdf:type rdf:resource="http://www.omac.org#IndividualMusicalWork"/>
+        <www:hasTitle xml:lang="lt">Agnus Dei</www:hasTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.omac.org#CESR_piece_00000769 -->
+
+    <owl:NamedIndividual rdf:about="http://www.omac.org#CESR_piece_00000769">
+        <rdf:type rdf:resource="http://www.omac.org#IndividualMusicalWork"/>
+        <www:hasTitle xml:lang="lt">Agnus</www:hasTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.omac.org#CESR_source_000001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.omac.org#CESR_source_000001">
+        <rdf:type rdf:resource="http://www.omac.org#SelfContainedMusicalExpression"/>
+        <www:hasTitle xml:lang="en">Second book of five-six-and eight-voice motets</www:hasTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.omac.org#CESR_source_000073 -->
+
+    <owl:NamedIndividual rdf:about="http://www.omac.org#CESR_source_000073">
+        <rdf:type rdf:resource="http://www.omac.org#SelfContainedMusicalExpression"/>
+        <www:hasTitle xml:lang="lt">Missa cum quatuor vocibus Ad imitationem Cantionis, O gente brunette, condita.</www:hasTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.omac.org#CESR_work_000001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.omac.org#CESR_work_000001">
+        <rdf:type rdf:resource="http://www.omac.org#ComplexMusicalWork"/>
+        <www:R10_hasMember rdf:resource="http://www.omac.org#CESR_piece_00000761"/>
+        <www:R10_hasMember rdf:resource="http://www.omac.org#CESR_piece_00000762"/>
+        <www:R10_hasMember rdf:resource="http://www.omac.org#CESR_piece_00000763"/>
+        <www:R10_hasMember rdf:resource="http://www.omac.org#CESR_piece_00000764"/>
+        <www:R10_hasMember rdf:resource="http://www.omac.org#CESR_piece_00000765"/>
+        <www:R10_hasMember rdf:resource="http://www.omac.org#CESR_piece_00000766"/>
+        <www:R10_hasMember rdf:resource="http://www.omac.org#CESR_piece_00000767"/>
+        <www:R10_hasMember rdf:resource="http://www.omac.org#CESR_piece_00000768"/>
+        <www:R10_hasMember rdf:resource="http://www.omac.org#CESR_piece_00000769"/>
+        <www:R3_realisedIn rdf:resource="http://www.omac.org#CESR_source_000073"/>
+        <www:composedBy rdf:resource="http://www.omac.org#Nicolas_de_Marle"/>
+        <www:hasTitle xml:lang="lt">Missa O gente brunette</www:hasTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.omac.org#Carlo_Gesualdo -->
+
+    <owl:NamedIndividual rdf:about="http://www.omac.org#Carlo_Gesualdo">
+        <rdf:type rdf:resource="http://www.omac.org#F10_Person"/>
+        <www:composed rdf:resource="http://www.omac.org#CESR_piece_00000192"/>
+        <www:hasLocalID xml:lang="en">CESR_person_00036</www:hasLocalID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.omac.org#De_Fevin_Missa_Ave_Maria -->
+
+    <owl:NamedIndividual rdf:about="http://www.omac.org#De_Fevin_Missa_Ave_Maria">
+        <rdf:type rdf:resource="http://www.omac.org#MusicalWork"/>
+        <www:composedBy rdf:resource="http://www.omac.org#Antoine_de_Fevin"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.omac.org#De_Pres_Ave_Maria -->
+
+    <owl:NamedIndividual rdf:about="http://www.omac.org#De_Pres_Ave_Maria">
+        <rdf:type rdf:resource="http://www.omac.org#MusicalWork"/>
+        <www:composedBy rdf:resource="http://www.omac.org#Josquin_des_Prez"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.omac.org#Josquin_des_Prez -->
+
+    <owl:NamedIndividual rdf:about="http://www.omac.org#Josquin_des_Prez">
+        <rdf:type rdf:resource="http://www.omac.org#Composer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.omac.org#Nicolas_de_Marle -->
+
+    <owl:NamedIndividual rdf:about="http://www.omac.org#Nicolas_de_Marle">
+        <rdf:type rdf:resource="http://www.omac.org#F10_Person"/>
+        <www:hasLocalID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CESR_person_00215</www:hasLocalID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.omac.org#Peter_Schubert -->
+
+    <owl:NamedIndividual rdf:about="http://www.omac.org#Peter_Schubert">
+        <rdf:type rdf:resource="http://www.omac.org#Analyst"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.omac.org#Schubert_claim_id23 -->
+
+    <owl:NamedIndividual rdf:about="http://www.omac.org#Schubert_claim_id23">
+        <rdf:type rdf:resource="http://www.omac.org#Claim"/>
+        <www:isAbout rdf:resource="http://www.omac.org#similarity_bet_De_Fevin_Missa_and_De_Pres_Ave_Maria"/>
+        <www:madeBy rdf:resource="http://www.omac.org#Peter_Schubert"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.omac.org#bookcopy_CG10_01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.omac.org#bookcopy_CG10_01">
+        <rdf:type rdf:resource="http://www.omac.org#F5_Item"/>
+        <www:R6_carries rdf:resource="http://www.omac.org#CESR_source_000001"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.omac.org#bookcopy_CG10_02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.omac.org#bookcopy_CG10_02">
+        <rdf:type rdf:resource="http://www.omac.org#F5_Item"/>
+        <www:R6_carries rdf:resource="http://www.omac.org#CESR_source_000001"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.omac.org#similarity_bet_De_Fevin_Missa_and_De_Pres_Ave_Maria -->
+
+    <owl:NamedIndividual rdf:about="http://www.omac.org#similarity_bet_De_Fevin_Missa_and_De_Pres_Ave_Maria">
+        <rdf:type rdf:resource="http://www.omac.org#NonMechanicalTransformation"/>
+        <www:R2_hasDerivative rdf:resource="http://www.omac.org#De_Fevin_Missa_Ave_Maria"/>
+        <www:hasModel rdf:resource="http://www.omac.org#De_Pres_Ave_Maria"/>
+        <www:amplified rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</www:amplified>
+        <www:embellished rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</www:embellished>
+        <www:newCombination rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</www:newCombination>
+        <www:newCounterSubject rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</www:newCounterSubject>
+        <www:oldCounterSubjectShifted rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</www:oldCounterSubjectShifted>
+        <www:oldCounterSubjectTransposed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</www:oldCounterSubjectTransposed>
+        <www:reduced rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</www:reduced>
+        <www:truncated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</www:truncated>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.omac.org#Allusion"/>
+            <rdf:Description rdf:about="http://www.omac.org#Arrangement"/>
+            <rdf:Description rdf:about="http://www.omac.org#Collage"/>
+            <rdf:Description rdf:about="http://www.omac.org#Contrafact"/>
+            <rdf:Description rdf:about="http://www.omac.org#Homage"/>
+            <rdf:Description rdf:about="http://www.omac.org#Imitation"/>
+            <rdf:Description rdf:about="http://www.omac.org#Omission"/>
+            <rdf:Description rdf:about="http://www.omac.org#Parody"/>
+            <rdf:Description rdf:about="http://www.omac.org#Plagiat"/>
+            <rdf:Description rdf:about="http://www.omac.org#Quotation"/>
+            <rdf:Description rdf:about="http://www.omac.org#Rendition"/>
+            <rdf:Description rdf:about="http://www.omac.org#Transcription"/>
+            <rdf:Description rdf:about="http://www.omac.org#Transformation"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.omac.org#Claim"/>
+            <rdf:Description rdf:about="http://www.omac.org#F10_Person"/>
+            <rdf:Description rdf:about="http://www.omac.org#F1_Work"/>
+            <rdf:Description rdf:about="http://www.omac.org#F2_Expression"/>
+            <rdf:Description rdf:about="http://www.omac.org#SimilarityRelationship"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.omac.org#Elaboration"/>
+            <rdf:Description rdf:about="http://www.omac.org#MechanicalTransformation"/>
+            <rdf:Description rdf:about="http://www.omac.org#NewCombination"/>
+            <rdf:Description rdf:about="http://www.omac.org#NonMechanicalTransformation"/>
+            <rdf:Description rdf:about="http://www.omac.org#Prolongation"/>
+            <rdf:Description rdf:about="http://www.omac.org#Simplification"/>
+            <rdf:Description rdf:about="http://www.omac.org#Truncation"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.omac.org#Antoine_de_Fevin"/>
+            <rdf:Description rdf:about="http://www.omac.org#Josquin_des_Prez"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.omac.org#Antoine_de_Fevin"/>
+            <rdf:Description rdf:about="http://www.omac.org#Josquin_des_Prez"/>
+            <rdf:Description rdf:about="http://www.omac.org#Peter_Schubert"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.omac.org#CESR_piece_00000192"/>
+            <rdf:Description rdf:about="http://www.omac.org#CESR_piece_00000761"/>
+            <rdf:Description rdf:about="http://www.omac.org#CESR_piece_00000762"/>
+            <rdf:Description rdf:about="http://www.omac.org#CESR_piece_00000763"/>
+            <rdf:Description rdf:about="http://www.omac.org#CESR_piece_00000764"/>
+            <rdf:Description rdf:about="http://www.omac.org#CESR_piece_00000765"/>
+            <rdf:Description rdf:about="http://www.omac.org#CESR_piece_00000766"/>
+            <rdf:Description rdf:about="http://www.omac.org#CESR_piece_00000767"/>
+            <rdf:Description rdf:about="http://www.omac.org#CESR_piece_00000768"/>
+            <rdf:Description rdf:about="http://www.omac.org#CESR_piece_00000769"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.omac.org#De_Fevin_Missa_Ave_Maria"/>
+            <rdf:Description rdf:about="http://www.omac.org#De_Pres_Ave_Maria"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.omac.org#bookcopy_CG10_01"/>
+            <rdf:Description rdf:about="http://www.omac.org#bookcopy_CG10_02"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="urn:swrl#x">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#y">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#z">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.omac.org#isAbout"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#z"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.omac.org#madeBy"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#y"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.omac.org#dependsOn"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#z"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.omac.org#dependsOn"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#z"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#y"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.omac.org#composedBy"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#y"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.omac.org#R10_hasMember"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#z"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.omac.org#composedBy"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#z"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#y"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
