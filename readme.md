@@ -1,14 +1,4 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2580
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fmodern\fcharset0 Courier;}
-{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
-{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\deftab720
-\pard\pardeftab720\partightenfactor0
+# OMAC ontology
+This repository contains a testing OWL ontology for musical critical assessments.
 
-\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 # OMAC ontology\
-This repository contains a testing OWL ontology for musical critical assessments.  \
-\
-Research work is needed to improve, integrate, and test the ontology.\
-}
+Research work is needed to improve, integrate, and test the ontology.
