@@ -309,8 +309,6 @@ Via the short cut:
     <owl:ObjectProperty rdf:about="http://www.omac.org/work#has_movement">
         <rdfs:subPropertyOf rdf:resource="http://www.omac.org/work#has_authorial_part"/>
         <owl:inverseOf rdf:resource="http://www.omac.org/work#movement_of"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Included in OMAC work module</rdfs:comment>
         <rdfs:comment xml:lang="en">This relationship is used to model an authorial musical work that is movement of another musical work. Movements could be further decomposed into sections (see the relation: has section)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">has movement</rdfs:label>
@@ -324,8 +322,10 @@ Via the short cut:
     <owl:ObjectProperty rdf:about="http://www.omac.org/work#has_section">
         <rdfs:subPropertyOf rdf:resource="http://www.omac.org/work#has_authorial_part"/>
         <owl:inverseOf rdf:resource="http://www.omac.org/work#section_of"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.omac.org/work#has_movement"/>
+            <rdf:Description rdf:about="http://www.omac.org/work#has_section"/>
+        </owl:propertyChainAxiom>
         <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Included in OMAC work module</rdfs:comment>
         <rdfs:comment xml:lang="en">This relationship is used to model an authorial musical work that is section of another musical work. Sections are the smallest parts of musical works which can not be further decomposed in authorial musical entities</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">has section</rdfs:label>
@@ -1123,11 +1123,11 @@ One can prefer the shortcut:
         <owl:sameAs rdf:resource="https://data.bnf.fr/ark:/12148/cb169327028"/>
         <property:genre rdf:resource="http://dbpedia.org/resource/Mass_(music)"/>
         <composed_by rdf:resource="http://viaf.org/viaf/44485735"/>
-        <has_authorial_part rdf:resource="http://www.omac.org/data#Agnus_dei_313248912"/>
-        <has_authorial_part rdf:resource="http://www.omac.org/data#Credo_313248912"/>
-        <has_authorial_part rdf:resource="http://www.omac.org/data#Gloria_313248912"/>
-        <has_authorial_part rdf:resource="http://www.omac.org/data#Kyrie_313248912"/>
-        <has_authorial_part rdf:resource="http://www.omac.org/data#Sanctus_313248912"/>
+        <has_movement rdf:resource="http://www.omac.org/data#Agnus_dei_313248912"/>
+        <has_movement rdf:resource="http://www.omac.org/data#Credo_313248912"/>
+        <has_movement rdf:resource="http://www.omac.org/data#Gloria_313248912"/>
+        <has_movement rdf:resource="http://www.omac.org/data#Kyrie_313248912"/>
+        <has_movement rdf:resource="http://www.omac.org/data#Sanctus_313248912"/>
         <property:composed rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1568</property:composed>
         <property:url rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://crimproject.org/masses/CRIM_Mass_0003/</property:url>
         <terms:title rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Missa o gente brunette</terms:title>
@@ -1188,7 +1188,7 @@ One can prefer the shortcut:
     <!-- http://www.omac.org/data#Agnus_dei_183088613 -->
 
     <owl:NamedIndividual rdf:about="http://www.omac.org/data#Agnus_dei_183088613">
-        <authorial_part_of rdf:resource="http://viaf.org/viaf/183088613"/>
+        <movement_of rdf:resource="http://viaf.org/viaf/183088613"/>
     </owl:NamedIndividual>
     
 
@@ -1197,8 +1197,8 @@ One can prefer the shortcut:
 
     <owl:NamedIndividual rdf:about="http://www.omac.org/data#Agnus_dei_313248912">
         <rdf:type rdf:resource="http://www.omac.org/work#MusicalWorkPart"/>
-        <has_authorial_part rdf:resource="http://www.omac.org/data#Agnus_dei_section1_313248912"/>
-        <has_authorial_part rdf:resource="http://www.omac.org/data#Agnus_dei_section2_313248912"/>
+        <has_section rdf:resource="http://www.omac.org/data#Agnus_dei_section1_313248912"/>
+        <has_section rdf:resource="http://www.omac.org/data#Agnus_dei_section2_313248912"/>
     </owl:NamedIndividual>
     
 
@@ -1232,7 +1232,7 @@ One can prefer the shortcut:
     <!-- http://www.omac.org/data#Credo_183088613 -->
 
     <owl:NamedIndividual rdf:about="http://www.omac.org/data#Credo_183088613">
-        <authorial_part_of rdf:resource="http://viaf.org/viaf/183088613"/>
+        <movement_of rdf:resource="http://viaf.org/viaf/183088613"/>
     </owl:NamedIndividual>
     
 
@@ -1248,7 +1248,7 @@ One can prefer the shortcut:
     <!-- http://www.omac.org/data#Gloria_183088613 -->
 
     <owl:NamedIndividual rdf:about="http://www.omac.org/data#Gloria_183088613">
-        <authorial_part_of rdf:resource="http://viaf.org/viaf/183088613"/>
+        <movement_of rdf:resource="http://viaf.org/viaf/183088613"/>
     </owl:NamedIndividual>
     
 
@@ -1264,7 +1264,7 @@ One can prefer the shortcut:
     <!-- http://www.omac.org/data#Kyrie_183088613 -->
 
     <owl:NamedIndividual rdf:about="http://www.omac.org/data#Kyrie_183088613">
-        <authorial_part_of rdf:resource="http://viaf.org/viaf/183088613"/>
+        <movement_of rdf:resource="http://viaf.org/viaf/183088613"/>
     </owl:NamedIndividual>
     
 
@@ -1273,9 +1273,9 @@ One can prefer the shortcut:
 
     <owl:NamedIndividual rdf:about="http://www.omac.org/data#Kyrie_313248912">
         <rdf:type rdf:resource="http://www.omac.org/work#MusicalWorkPart"/>
-        <has_authorial_part rdf:resource="http://www.omac.org/data#Christe_313248912"/>
-        <has_authorial_part rdf:resource="http://www.omac.org/data#Kyrie_section1_313248912"/>
-        <has_authorial_part rdf:resource="http://www.omac.org/data#Kyrie_section2_313248912"/>
+        <has_section rdf:resource="http://www.omac.org/data#Christe_313248912"/>
+        <has_section rdf:resource="http://www.omac.org/data#Kyrie_section1_313248912"/>
+        <has_section rdf:resource="http://www.omac.org/data#Kyrie_section2_313248912"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Kyrie of Missa o gente brunette</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Kyrie</rdfs:label>
         <skos:prefLabel xml:lang="lat">Kyrie</skos:prefLabel>
@@ -1372,7 +1372,7 @@ One can prefer the shortcut:
     <!-- http://www.omac.org/data#Sanctus_183088613 -->
 
     <owl:NamedIndividual rdf:about="http://www.omac.org/data#Sanctus_183088613">
-        <authorial_part_of rdf:resource="http://viaf.org/viaf/183088613"/>
+        <movement_of rdf:resource="http://viaf.org/viaf/183088613"/>
     </owl:NamedIndividual>
     
 
