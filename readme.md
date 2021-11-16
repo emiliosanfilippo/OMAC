@@ -1,4 +1,6 @@
 # OMAC ontology
-This repository contains a testing OWL ontology for musical critical assessments.
+The repository contains an OWL ontology, called OMAC, for musical critical assessments.
+The ontology is under development and is (partially)
+documented at: https://emiliosanfilippo.gitbook.io/omac/
 
-Research work is needed to improve, integrate, and test the ontology.
+Current research work aims at improving, integrating, and testing OMAC against domain experts' knowledge and case studies.
