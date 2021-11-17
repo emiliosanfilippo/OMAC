@@ -357,6 +357,7 @@ Via the short cut:
 
     <owl:ObjectProperty rdf:about="http://www.omac.org/work#movement_of">
         <rdfs:subPropertyOf rdf:resource="http://www.omac.org/work#authorial_part_of"/>
+        <rdfs:domain rdf:resource="http://www.omac.org/work#Movement"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Included in OMAC work module</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">movement of</rdfs:label>
         <skos:prefLabel xml:lang="en">movement of</skos:prefLabel>
@@ -421,6 +422,7 @@ Via the short cut:
 
     <owl:ObjectProperty rdf:about="http://www.omac.org/work#section_of">
         <rdfs:subPropertyOf rdf:resource="http://www.omac.org/work#authorial_part_of"/>
+        <rdfs:domain rdf:resource="http://www.omac.org/work#Section"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Included in OMAC work module</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">section of</rdfs:label>
         <skos:prefLabel xml:lang="en">section of</skos:prefLabel>
@@ -772,6 +774,30 @@ One can prefer the shortcut:
     
 
 
+    <!-- http://www.omac.org/work#Movement -->
+
+    <owl:Class rdf:about="http://www.omac.org/work#Movement">
+        <rdfs:subClassOf rdf:resource="http://www.omac.org/work#MusicalWorkPart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.omac.org/work#movement_of"/>
+                <owl:someValuesFrom rdf:resource="http://www.omac.org/work#MusicalWork"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.omac.org/work#movement_of"/>
+                <owl:allValuesFrom rdf:resource="http://www.omac.org/work#MusicalWork"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.omac.org/work#Section"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Included in OMAC work module</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Movement</rdfs:label>
+        <skos:prefLabel xml:lang="en">Movement</skos:prefLabel>
+    </owl:Class>
+    
+
+
     <!-- http://www.omac.org/work#MusicalEntity -->
 
     <owl:Class rdf:about="http://www.omac.org/work#MusicalEntity">
@@ -828,6 +854,14 @@ One can prefer the shortcut:
     <!-- http://www.omac.org/work#MusicalWorkPart -->
 
     <owl:Class rdf:about="http://www.omac.org/work#MusicalWorkPart">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.omac.org/work#Movement"/>
+                    <rdf:Description rdf:about="http://www.omac.org/work#Section"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.omac.org/work#MusicalEntity"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -872,6 +906,53 @@ One can prefer the shortcut:
         <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Included in OMAC work module</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Performing Force Type</rdfs:label>
         <skos:prefLabel xml:lang="en">Performing Force Type</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.omac.org/work#Section -->
+
+    <owl:Class rdf:about="http://www.omac.org/work#Section">
+        <rdfs:subClassOf rdf:resource="http://www.omac.org/work#MusicalWorkPart"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.omac.org/work#section_of"/>
+                        <owl:someValuesFrom rdf:resource="http://www.omac.org/work#Section"/>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.omac.org/work#section_of"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.omac.org/work#MusicalWork"/>
+                            <rdf:Description rdf:about="http://www.omac.org/work#MusicalWorkPart"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.omac.org/work#section_of"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.omac.org/work#MusicalWork"/>
+                            <rdf:Description rdf:about="http://www.omac.org/work#MusicalWorkPart"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Included in OMAC work module</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Section</rdfs:label>
+        <skos:prefLabel xml:lang="en">Section</skos:prefLabel>
     </owl:Class>
     
 
@@ -1196,7 +1277,6 @@ One can prefer the shortcut:
     <!-- http://www.omac.org/data#Agnus_dei_313248912 -->
 
     <owl:NamedIndividual rdf:about="http://www.omac.org/data#Agnus_dei_313248912">
-        <rdf:type rdf:resource="http://www.omac.org/work#MusicalWorkPart"/>
         <has_section rdf:resource="http://www.omac.org/data#Agnus_dei_section1_313248912"/>
         <has_section rdf:resource="http://www.omac.org/data#Agnus_dei_section2_313248912"/>
     </owl:NamedIndividual>
