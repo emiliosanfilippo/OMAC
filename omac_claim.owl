@@ -1081,7 +1081,7 @@ https://sites.google.com/haverford.edu/crim-project/vocabularies/musical-types</
     <!-- http://www.omac.org/data#Credo_180445237 -->
 
     <owl:NamedIndividual rdf:about="http://www.omac.org/data#Credo_180445237">
-        <work:authorial_part_of rdf:resource="http://viaf.org/viaf/180445237"/>
+        <work:movement_of rdf:resource="http://viaf.org/viaf/180445237"/>
     </owl:NamedIndividual>
     
 
