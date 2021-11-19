@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.omac.org/work#"
      xml:base="http://www.omac.org/work"
+     xmlns:dbo="http://dbpedia.org/ontology/"
+     xmlns:dbp="http://dbpedia.org/property/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:www="http://www.omac.org#"
@@ -11,9 +13,7 @@
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
      xmlns:work="http://www.omac.org/work#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
-     xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:ontology="http://dbpedia.org/ontology/"
-     xmlns:property="http://dbpedia.org/property/">
+     xmlns:dcterms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://www.omac.org/work">
         <owl:versionInfo>under development</owl:versionInfo>
     </owl:Ontology>
@@ -1091,11 +1091,11 @@ One can prefer the shortcut:
     <!-- http://viaf.org/viaf/12492826 -->
 
     <owl:NamedIndividual rdf:about="http://viaf.org/viaf/12492826">
-        <property:birthDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1874-09-13</property:birthDate>
-        <property:deathDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1951-07-13</property:deathDate>
-        <property:familyname rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Schoenberg</property:familyname>
-        <property:firstname rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Arnold</property:firstname>
-        <property:name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Arnold Schoenberg</property:name>
+        <dbp:birthDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1874-09-13</dbp:birthDate>
+        <dbp:deathDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1951-07-13</dbp:deathDate>
+        <dbp:familyname rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Schoenberg</dbp:familyname>
+        <dbp:firstname rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Arnold</dbp:firstname>
+        <dbp:name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Arnold Schoenberg</dbp:name>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://viaf.org/</rdfs:isDefinedBy>
         <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Arnold Schoenberg</rdfs:label>
         <skos:prefLabel xml:lang="en">Arnold Schoenberg</skos:prefLabel>
@@ -1135,17 +1135,17 @@ One can prefer the shortcut:
 
     <owl:NamedIndividual rdf:about="http://viaf.org/viaf/176303863">
         <rdf:type rdf:resource="http://www.omac.org/work#MusicalWork"/>
-        <property:genre rdf:resource="http://www.omac.org/work#Chamber_Music_genre"/>
-        <property:key rdf:resource="http://dbpedia.org/resource/G_minor"/>
+        <dbp:genre rdf:resource="http://www.omac.org/work#Chamber_Music_genre"/>
+        <dbp:key rdf:resource="http://dbpedia.org/resource/G_minor"/>
         <composed_by rdf:resource="http://viaf.org/viaf/7573295"/>
         <has_arrangement rdf:resource="http://www.omac.org/data#Piano_Quartet_Op_25_arrangement"/>
         <scored_for rdf:resource="http://dbpedia.org/resource/Cello"/>
         <scored_for rdf:resource="http://dbpedia.org/resource/Piano"/>
         <scored_for rdf:resource="http://dbpedia.org/resource/Viola"/>
         <scored_for rdf:resource="http://dbpedia.org/resource/Violin"/>
-        <property:composed rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">1856–1861</property:composed>
-        <property:movements rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Four</property:movements>
-        <terms:title rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Piano Quartet Op.25</terms:title>
+        <dbp:composed rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">1856–1861</dbp:composed>
+        <dbp:movements rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Four</dbp:movements>
+        <dcterms:title rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Piano Quartet Op.25</dcterms:title>
         <rdfs:isDefinedBy xml:lang="en">http://viaf.org/</rdfs:isDefinedBy>
         <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Piano Quartet Op. 25</rdfs:label>
         <skos:prefLabel xml:lang="en">Piano Quartet Op. 25</skos:prefLabel>
@@ -1157,10 +1157,10 @@ One can prefer the shortcut:
 
     <owl:NamedIndividual rdf:about="http://viaf.org/viaf/183088613">
         <rdf:type rdf:resource="http://www.omac.org/work#MusicalWork"/>
-        <property:genre rdf:resource="http://dbpedia.org/resource/Mass_(music)"/>
+        <dbp:genre rdf:resource="http://dbpedia.org/resource/Mass_(music)"/>
         <composed_by rdf:resource="http://viaf.org/viaf/195668"/>
-        <property:composed rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1556</property:composed>
-        <terms:title rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Missa Confitemini</terms:title>
+        <dbp:composed rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1556</dbp:composed>
+        <dcterms:title rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Missa Confitemini</dcterms:title>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://viaf.org/</rdfs:isDefinedBy>
         <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Missa confitemini</rdfs:label>
         <skos:prefLabel xml:lang="lat">Missa confitemini</skos:prefLabel>
@@ -1171,9 +1171,9 @@ One can prefer the shortcut:
     <!-- http://viaf.org/viaf/195668 -->
 
     <owl:NamedIndividual rdf:about="http://viaf.org/viaf/195668">
-        <property:familyname rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Colin</property:familyname>
-        <property:firstname rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Pierre</property:firstname>
-        <property:name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Pierre Colin</property:name>
+        <dbp:familyname rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Colin</dbp:familyname>
+        <dbp:firstname rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Pierre</dbp:firstname>
+        <dbp:name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Pierre Colin</dbp:name>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://viaf.org/</rdfs:isDefinedBy>
         <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Pierre Colin</rdfs:label>
     </owl:NamedIndividual>
@@ -1184,12 +1184,12 @@ One can prefer the shortcut:
 
     <owl:NamedIndividual rdf:about="http://viaf.org/viaf/294918919">
         <rdf:type rdf:resource="http://www.omac.org/work#MusicalWork"/>
-        <property:genre rdf:resource="http://www.omac.org/work#Symphony_genre"/>
+        <dbp:genre rdf:resource="http://www.omac.org/work#Symphony_genre"/>
         <composed_by rdf:resource="http://viaf.org/viaf/32197206"/>
         <scored_for rdf:resource="http://www.omac.org/data#k385_performing_force1"/>
         <scored_for rdf:resource="http://www.omac.org/data#k385_performing_force2"/>
-        <property:composed rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1782</property:composed>
-        <terms:title rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Symphony No. 35</terms:title>
+        <dbp:composed rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1782</dbp:composed>
+        <dcterms:title rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Symphony No. 35</dcterms:title>
         <rdfs:comment>scoring not complete, only for testing/example purposes</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://viaf.org/</rdfs:isDefinedBy>
         <skos:prefLabel xml:lang="en">Symphony No. 35</skos:prefLabel>
@@ -1201,17 +1201,16 @@ One can prefer the shortcut:
 
     <owl:NamedIndividual rdf:about="http://viaf.org/viaf/313248912">
         <rdf:type rdf:resource="http://www.omac.org/work#MusicalWork"/>
-        <owl:sameAs rdf:resource="https://data.bnf.fr/ark:/12148/cb169327028"/>
-        <property:genre rdf:resource="http://dbpedia.org/resource/Mass_(music)"/>
+        <dbp:genre rdf:resource="http://dbpedia.org/resource/Mass_(music)"/>
         <composed_by rdf:resource="http://viaf.org/viaf/44485735"/>
         <has_movement rdf:resource="http://www.omac.org/data#Agnus_dei_313248912"/>
         <has_movement rdf:resource="http://www.omac.org/data#Credo_313248912"/>
         <has_movement rdf:resource="http://www.omac.org/data#Gloria_313248912"/>
         <has_movement rdf:resource="http://www.omac.org/data#Kyrie_313248912"/>
         <has_movement rdf:resource="http://www.omac.org/data#Sanctus_313248912"/>
-        <property:composed rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1568</property:composed>
-        <property:url rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://crimproject.org/masses/CRIM_Mass_0003/</property:url>
-        <terms:title rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Missa o gente brunette</terms:title>
+        <dbp:composed rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1568</dbp:composed>
+        <dbp:url rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://crimproject.org/masses/CRIM_Mass_0003/</dbp:url>
+        <dcterms:title rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Missa o gente brunette</dcterms:title>
         <CRIM_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">CRIM_Mass_0003</CRIM_identifier>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">http://viaf.org</rdfs:isDefinedBy>
         <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Missa o gente brunette</rdfs:label>
@@ -1223,13 +1222,13 @@ One can prefer the shortcut:
     <!-- http://viaf.org/viaf/32197206 -->
 
     <owl:NamedIndividual rdf:about="http://viaf.org/viaf/32197206">
-        <property:birthPlace rdf:resource="http://viaf.org/viaf/143061561"/>
-        <property:deathPlace rdf:resource="http://viaf.org/viaf/155870729"/>
-        <property:birthDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1756-01-27</property:birthDate>
-        <property:deathDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1791-12-05</property:deathDate>
-        <property:familyname rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Mozart</property:familyname>
-        <property:firstname rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Wolfgang Amadeus</property:firstname>
-        <property:name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Wolfgang Amadeus Mozart</property:name>
+        <dbp:birthPlace rdf:resource="http://viaf.org/viaf/143061561"/>
+        <dbp:deathPlace rdf:resource="http://viaf.org/viaf/155870729"/>
+        <dbp:birthDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1756-01-27</dbp:birthDate>
+        <dbp:deathDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1791-12-05</dbp:deathDate>
+        <dbp:familyname rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Mozart</dbp:familyname>
+        <dbp:firstname rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Wolfgang Amadeus</dbp:firstname>
+        <dbp:name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Wolfgang Amadeus Mozart</dbp:name>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://viaf.org/</rdfs:isDefinedBy>
         <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Wolfgang Amadeus Mozart</skos:prefLabel>
     </owl:NamedIndividual>
@@ -1239,9 +1238,9 @@ One can prefer the shortcut:
     <!-- http://viaf.org/viaf/44485735 -->
 
     <owl:NamedIndividual rdf:about="http://viaf.org/viaf/44485735">
-        <property:familyname rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">de Marle</property:familyname>
-        <property:firstname rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Nicolas</property:firstname>
-        <property:name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Nicolas de Marle</property:name>
+        <dbp:familyname rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">de Marle</dbp:familyname>
+        <dbp:firstname rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Nicolas</dbp:firstname>
+        <dbp:name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Nicolas de Marle</dbp:name>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">http://viaf.org/</rdfs:isDefinedBy>
         <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Nicolas de Marle</skos:prefLabel>
     </owl:NamedIndividual>
@@ -1251,14 +1250,14 @@ One can prefer the shortcut:
     <!-- http://viaf.org/viaf/7573295 -->
 
     <owl:NamedIndividual rdf:about="http://viaf.org/viaf/7573295">
-        <property:birthPlace rdf:resource="http://viaf.org/viaf/148855657"/>
-        <property:composer rdf:resource="http://viaf.org/viaf/176303863"/>
-        <property:deathPlace rdf:resource="http://viaf.org/viaf/155870729"/>
-        <property:birthDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1833-05-07</property:birthDate>
-        <property:deathDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1897-04-03</property:deathDate>
-        <property:familyname rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Brahms</property:familyname>
-        <property:firstname rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Johannes</property:firstname>
-        <property:name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Johannes Brahms</property:name>
+        <dbp:birthPlace rdf:resource="http://viaf.org/viaf/148855657"/>
+        <dbp:composer rdf:resource="http://viaf.org/viaf/176303863"/>
+        <dbp:deathPlace rdf:resource="http://viaf.org/viaf/155870729"/>
+        <dbp:birthDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1833-05-07</dbp:birthDate>
+        <dbp:deathDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1897-04-03</dbp:deathDate>
+        <dbp:familyname rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Brahms</dbp:familyname>
+        <dbp:firstname rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Johannes</dbp:firstname>
+        <dbp:name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Johannes Brahms</dbp:name>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://viaf.org/</rdfs:isDefinedBy>
         <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Johannes Brahms</rdfs:label>
         <skos:prefLabel xml:lang="en">Johannes Brahms</skos:prefLabel>
@@ -1435,7 +1434,7 @@ One can prefer the shortcut:
         <rdf:type rdf:resource="http://www.omac.org/work#MusicalWork"/>
         <arranged_by rdf:resource="http://viaf.org/viaf/12492826"/>
         <scored_for rdf:resource="http://dbpedia.org/resource/Orchestra"/>
-        <terms:title rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Piano Quartet Op. 25 arranged by Arnold Schonenberg</terms:title>
+        <dcterms:title rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Piano Quartet Op. 25 arranged by Arnold Schonenberg</dcterms:title>
         <arrangement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1937</arrangement_date>
     </owl:NamedIndividual>
     
@@ -1573,15 +1572,6 @@ One can prefer the shortcut:
 
     <owl:NamedIndividual rdf:about="http://www.omac.org/work#Symphony_genre">
         <rdf:type rdf:resource="http://www.omac.org/work#GenreType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://data.bnf.fr/ark:/12148/cb169327028 -->
-
-    <owl:NamedIndividual rdf:about="https://data.bnf.fr/ark:/12148/cb169327028">
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://data.bnf.fr/</rdfs:isDefinedBy>
-        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Missa o gente brunette</rdfs:label>
     </owl:NamedIndividual>
     
 
