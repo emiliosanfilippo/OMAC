@@ -3,27 +3,39 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix dbp: <http://dbpedia.org/property/>.
+@prefix dbr: <http://dbpedia.org/resource/>.
 @prefix viaf: <http://viaf.org/viaf/>.
 @prefix dcterms: <http://purl.org/dc/terms/>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
 viaf:313248912
-    dcterms:title "Missa o gente brunette"^^rdfs:Literal;
+    dcterms:title "Missa o gente brunette"^^xsd:string;
     rdf:type ow:MusicalWork;
     ow:composed_by viaf:44485735;
     dbp:composed "1568"^^xsd:gYear;
     dbp:genre <http://dbpedia.org/resource/Mass_(music)>;
-    ow:has_section od:Kyrie_313248912, od:Gloria_313248912, od:Credo_313248912, od:Sanctus_313248912, od:AgnusDei_313248912;
-    ow:CRIM_identifier "CRIM_Mass_0003"^^rdfs:Literal;
-    dbp:url "http://crimproject.org/masses/CRIM_Mass_0003/"^^xsd:anyURI.
+    ow:has_section od:Kyrie_313248912, od:Gloria_313248912, od:Credo_313248912, od:Sanctus_313248912, od:AgnusDei_313248912.
+    #ow:CRIM_identifier "CRIM_Mass_0003"^^xsd:string;
+    #dbp:url "http://crimproject.org/masses/CRIM_Mass_0003/"^^xsd:anyURI.
 
 od:Kyrie_313248912
+dbp:genre dbr:Kyrie;
 ow:has_subsection od:Kyrie1_313248912, od:Christe_313248912, od:Kyrie2_313248912.
 
+od:Gloria_313248912 dbp:genre dbr:Gloria.
+
+od:Credo_313248912 dbp:genre dbr:Credo.
+
 od:Sanctus_313248912
+dbp:genre dbr:Sanctus;
 od:has_subsection od:Sanctus_section_313248912, od:PleniSunt_313248912, od:Osanna_313248912, od:Benedictus_313248912.
 
 od:AgnusDei_313248912
+dbp:genre <http://dbpedia.org/resource/Agnus_Dei_(music)>;
 ow:has_subsection od:AgnusDei1_313248912, od:AgnusDei2_313248912.
 
-viaf:44485735 dbp:name "Nicolas de Marle"^^rdfs:Literal.
+viaf:44485735
+rdf:type ow:Composer;
+dbp:firstname "Nicolas"^^xsd:string;
+dbp:familyname "de Marle"^^xsd:string;
+dbp:name "Nicolas de Marle"^^xsd:string.
