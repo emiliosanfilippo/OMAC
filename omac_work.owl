@@ -1,21 +1,21 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.omac.org/work#"
      xml:base="http://www.omac.org/work"
+     xmlns:ow="http://www.omac.org/work#"
      xmlns:dbo="http://dbpedia.org/ontology/"
      xmlns:dbp="http://dbpedia.org/property/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:www="http://www.omac.org#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:obda="https://w3id.org/obda/vocabulary#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
-     xmlns:work="http://www.omac.org/work#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:dcterms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://www.omac.org/work">
+        <rdfs:comment>All data present in this file are intended for testing purposes only</rdfs:comment>
         <owl:versionInfo>under development</owl:versionInfo>
     </owl:Ontology>
     
@@ -734,8 +734,8 @@ One can prefer the shortcut:
 
     <owl:Class rdf:about="http://www.omac.org/work#GenreType">
         <rdfs:subClassOf rdf:resource="http://www.omac.org/work#AttributeType"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Included in OMAC work module</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Genre Type</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Included in OMAC work module</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Genre Type</rdfs:label>
         <skos:prefLabel xml:lang="en">Genre Type</skos:prefLabel>
     </owl:Class>
     
@@ -1004,11 +1004,44 @@ One can prefer the shortcut:
     
 
 
+    <!-- http://dbpedia.org/resource/Baroque_music -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Baroque_music">
+        <rdf:type rdf:resource="http://www.omac.org/work#StyleType"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baroque music (UK: /bəˈrɒk/ or US: /bəˈroʊk/) is a period or style of Western classical music composed from approximately 1600 to 1750. This era followed the Renaissance music era, and was followed in turn by the Classical era, with the galant style marking the transition between Baroque and Classical eras. The Baroque period is divided into three major phases: early, middle, and late. Overlapping in time, they are conventionally dated from 1580 to 1650, from 1630 to 1700, and from 1680 to 1750. Baroque music forms a major portion of the &quot;classical music&quot; canon, and is now widely studied, performed, and listened to. The term &quot;baroque&quot; comes from the Portuguese word barroco, meaning &quot;misshapen pearl&quot;. Key composers of the Baroque era include Johann Sebastian Bach, Antonio Vivaldi, George Fr</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baroque music style</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://dbpedia.org/resource/Cello -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Cello">
         <rdf:type rdf:resource="http://www.omac.org/work#PerformingForceType"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/</rdfs:isDefinedBy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Chamber_music -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Chamber_music">
+        <rdf:type rdf:resource="http://www.omac.org/work#GenreType"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chamber music is a form of classical music that is composed for a small group of instruments—traditionally a group that could fit in a palace chamber or a large room. Most broadly, it includes any art music that is performed by a small number of performers, with one performer to a part (in contrast to orchestral music, in which each string part is played by a number of performers). However, by convention, it usually does not include solo instrument performances.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chamber music</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Credo -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Credo">
+        <rdf:type rdf:resource="http://www.omac.org/work#GenreType"/>
+        <rdfs:comment xml:lang="en">In Christian liturgy, the credo (Latin: [ˈkɾeːdoː]; Latin for &quot;I believe&quot;) is the Nicene-Constantinopolitan Creed – or its shorter and nowadays more used version, the Apostles&apos; Creed – in the Mass, either as a prayer, a spoken text, or sung as Gregorian chant or other musical settings of the Mass.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Credo genre</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1026,10 +1059,84 @@ One can prefer the shortcut:
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/G_minor">
         <rdf:type rdf:resource="http://www.omac.org/work#KeyType"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G minor is a minor scale based on G, consisting of the pitches G, A, B♭, C, D, E♭, and F. Its key signature has two flats. Its relative major is B-flat major and its parallel major is G major. The G natural minor scale is: Changes needed for the melodic and harmonic versions of the scale are written in with accidentals as necessary (source DBPedia)</rdfs:comment>
         <rdfs:isDefinedBy>http://dbpedia.org/resource/</rdfs:isDefinedBy>
-        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">G minor</rdfs:label>
-        <skos:definition xml:lang="en">G minor is a minor scale based on G, consisting of the pitches G, A, B♭, C, D, E♭, and F. Its key signature has two flats. Its relative major is B-flat major and its parallel major is G major. The G natural minor scale is: Changes needed for the melodic and harmonic versions of the scale are written in with accidentals as necessary (source DBPedia)</skos:definition>
-        <skos:prefLabel xml:lang="en">G minor</skos:prefLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G minor</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Gloria -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Gloria">
+        <rdf:type rdf:resource="http://www.omac.org/work#GenreType"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">http://dbpedia.org/resource/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gloria genre</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Hymn -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hymn">
+        <rdf:type rdf:resource="http://www.omac.org/work#GenreType"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A hymn is a type of song, usually religious, specifically written for the purpose of adoration or prayer, and typically addressed to a deity or deities, or to a prominent figure or personification. The word hymn derives from Greek ὕμνος (hymnos), which means &quot;a song of praise&quot;. A writer of hymns is known as a hymnist. The singing or composition of hymns is called hymnody. Collections of hymns are known as hymnals or hymn books. Hymns may or may not include instrumental accompaniment.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Hymn</rdfs:isDefinedBy>
+        <rdfs:label>Hymn genre</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Kyrie -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kyrie">
+        <rdf:type rdf:resource="http://www.omac.org/work#GenreType"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kyrie, a transliteration of Greek Κύριε, vocative case of Κύριος (Kyrios), is a common name of an important prayer of Christian liturgy, also called the Kyrie eleison (/ˈkɪəri.eɪ ɪˈleɪ.ɪsɒn, -sən/ KEER-ee-ay il-AY-iss-on, -⁠ən; Ancient Greek: Κύριε, ἐλέησον, romanized: Kýrie eléēson, lit. &apos;Lord, have mercy&apos;).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kyrie genre</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Lied -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Lied">
+        <rdf:type rdf:resource="http://www.omac.org/work#GenreType"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lied genre</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Madrigal -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Madrigal">
+        <rdf:type rdf:resource="http://www.omac.org/work#GenreType"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A madrigal is a secular vocal music composition of the Renaissance (15th–16th c.) and early Baroque (1600–1750) eras. The polyphonic madrigal is unaccompanied, and the number of voices varies from two to eight, but usually features three to six voices, whilst the metre of the madrigal varies between two or three tercets, followed by one or two couplets. Unlike the verse-repeating strophic forms sung to the same music, most madrigals are through-composed, featuring different music for each stanza of lyrics, whereby the composer expresses the emotions contained in each line and in single words of the poem being sung.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Madrigal genre</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Medieval_music -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Medieval_music">
+        <rdf:type rdf:resource="http://www.omac.org/work#StyleType"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Medieval music encompasses the sacred and secular music of the Western Europe during the Middle Ages, from approximately the 6th to 15th centuries. It is the first and longest era of Western classical music and followed by the Renaissance music; the two eras comprise what musicologists term as early music, preceding the common practice period. Following the traditional divisions of the Middle Ages, medieval music can be divided into , , and medieval music.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Medieval music style</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Motet -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Motet">
+        <rdf:type rdf:resource="http://www.omac.org/work#GenreType"/>
+        <rdfs:comment xml:lang="en">In Western classical music, a motet is mainly a vocal musical composition, of highly diverse form and style, from the high medieval music to the present. The motet was one of the pre-eminent polyphonic forms of Renaissance music. According to Margaret Bent, &quot;a piece of music in several parts with words&quot; is as precise a definition of the motet as will serve from the 13th to the late 16th century and beyond. The late 13th-century theorist Johannes de Grocheo believed that the motet was &quot;not to be celebrated in the presence of common people, because they do not notice its subtlety, nor are they delighted in hearing it, but in the presence of the educated and of those who are seeking out subtleties in the arts&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Motet</rdfs:isDefinedBy>
+        <rdfs:label>Motet genre</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1061,6 +1168,62 @@ One can prefer the shortcut:
     
 
 
+    <!-- http://dbpedia.org/resource/Plainsong -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Plainsong">
+        <rdf:type rdf:resource="http://www.omac.org/work#GenreType"/>
+        <rdfs:comment xml:lang="en">Plainsong (calque from the French « plain-chant »; hence also plainchant; Latin: cantus planus) is a body of chants used in the liturgies of the Western Church. When referring to the term plainsong, it is those sacred pieces that are composed in Latin text. Plainsong was the exclusive form of Christian church music until the ninth century, and the introduction of polyphony The monophonic chants of plainsong have a non-metric rhythm. Their rhythms are generally freer than the metered rhythm of later Western music, and they are sung without musical accompaniment.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Plainsong</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Plainsong genre</rdfs:label>
+        <skos:altLabel xml:lang="fr">Plainchant</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Renaissance_music -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Renaissance_music">
+        <rdf:type rdf:resource="http://www.omac.org/work#StyleType"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Renaissance music is vocal and instrumental music written and performed in Europe during the Renaissance era. Consensus among music historians has been to start the era around 1400, with the end of the medieval era, and to close it around 1600, with the beginning of the Baroque period, therefore commencing the musical Renaissance about a hundred years after the beginning of the Renaissance as it is understood in other disciplines.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Renaissance music style</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Sanctus -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Sanctus">
+        <rdf:type rdf:resource="http://www.omac.org/work#GenreType"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Sanctus (Latin: Sanctus, &quot;Holy&quot;) is a hymn in Christian liturgy. It may also be called the epinikios hymnos (Greek: ἐπινίκιος ὕμνος, &quot;Hymn of Victory&quot;) when referring to the Greek rendition. In Western Christianity, the Sanctus forms part of the Ordinary and is sung (or said) as the final words of the Preface of the Eucharistic Prayer of remembrance, consecration, and praise. The preface, which alters according to the season, usually concludes with words describing the praise of the worshippers joining with the angels, who are pictured as praising God with the words of the Sanctus.In the Byzantine Rite and general Eastern Orthodox Christianity, the Sanctus is offered as a response by the choir during the Holy Anaphora.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sanctus genre</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Symphony -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Symphony">
+        <rdf:type rdf:resource="http://www.omac.org/work#GenreType"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A symphony is an extended musical composition in Western classical music, written by composers, most often for orchestra. Although the term has had many meanings from its origins in the ancient Greek era, by the late 18th century the word had taken on the meaning common today: a work usually consisting of multiple distinct sections or movements, often four, with the first movement in sonata form. Symphonies are almost always scored for an orchestra consisting of a string section (violin, viola, cello, and double bass), brass, woodwind, and percussion instruments which altogether number about 30 to 100 musicians. Symphonies are notated in a musical score, which contains all the instrument parts. Orchestral musicians play from parts which contain just the notated music for their own instrument. Some symphonies also contain vocal parts (e.g., Beethoven&apos;s Ninth Symphony). (en)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Symphony genre</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Villancico -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Villancico">
+        <rdf:type rdf:resource="http://www.omac.org/work#GenreType"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The villancico (Spanish, pronounced [biʎanˈθiko]) or vilancete (Portuguese, pronounced [vi.lɐ̃ˈse.t(ɨ)]) was a common poetic and musical form of the Iberian Peninsula and Latin America popular from the late 15th to 18th centuries. With the decline in popularity of the villancicos in the 20th century, the term became reduced to mean merely &quot;Christmas carol&quot;. Important composers of villancicos were Juan del Encina, Pedro de Escobar, Francisco Guerrero, Manuel de Zumaya, Juana Inés de la Cruz, Gaspar Fernandes, and Juan Gutiérrez de Padilla.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Villancico genre</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://dbpedia.org/resource/Viola -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Viola">
@@ -1079,13 +1242,35 @@ One can prefer the shortcut:
     
 
 
+    <!-- http://dbpedia.org/resource/Agnus_Dei_(music) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Agnus_Dei_(music)">
+        <rdf:type rdf:resource="http://www.omac.org/work#GenreType"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Agnus Dei is the Latin name under which the &quot;Lamb of God&quot; is honoured within the Roman Catholic Mass and, by extension, other Christian liturgies descending from the Latin tradition. It is the name given to a specific prayer that occurs in these liturgies, and is the name given to the music pieces that accompany the text of this prayer. The use of the title &quot;Lamb of God&quot; in liturgy is based on John 1:29, in which St. John the Baptist, upon seeing Jesus, proclaims &quot;Behold, the Lamb of God, who takes away the sin of the world!&quot;</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Agnus dei genre</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://dbpedia.org/resource/Mass_(music) -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mass_(music)">
         <rdf:type rdf:resource="http://www.omac.org/work#GenreType"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Mass (Latin: missa), a form of sacred musical composition, is a choral composition that sets the invariable portions of the Eucharistic liturgy (principally that of the Catholic Church, the Anglican Communion, and Lutheranism) to music. Musical Masses take their name from the Catholic liturgy called &quot;the Mass&quot;. Masses can be a cappella, that is, without an independent accompaniment, or they can be accompanied by instrumental obbligatos up to and including a full orchestra. Many masses, especially later ones, were never intended to be performed during the celebration of an actual mass.</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/</rdfs:isDefinedBy>
-        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Mass_genre</rdfs:label>
-        <skos:prefLabel xml:lang="en">Mass_genre</skos:prefLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mass genre</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://fr.dbpedia.org/resource/Cantate_chorale -->
+
+    <owl:NamedIndividual rdf:about="http://fr.dbpedia.org/resource/Cantate_chorale">
+        <rdf:type rdf:resource="http://www.omac.org/work#GenreType"/>
+        <rdfs:comment xml:lang="en">In music, a chorale cantata is a sacred composition for voices and instruments, principally from the German Baroque era, in which the organizing principle is the words and music to a chorale. Usually a chorale cantata is in multiple movements or parts. Most chorale cantatas were written between approximately 1650 and 1750. By far the most famous are by J. S. Bach, especially the cantatas composed in his second annual cycle of cantatas, started in Leipzig in 1724.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://fr.dbpedia.org/resource/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cantate chorale genre</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1099,8 +1284,7 @@ One can prefer the shortcut:
         <dbp:firstname rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Arnold</dbp:firstname>
         <dbp:name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Arnold Schoenberg</dbp:name>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://viaf.org/</rdfs:isDefinedBy>
-        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Arnold Schoenberg</rdfs:label>
-        <skos:prefLabel xml:lang="en">Arnold Schoenberg</skos:prefLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arnold Schoenberg</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1108,8 +1292,9 @@ One can prefer the shortcut:
     <!-- http://viaf.org/viaf/143061561 -->
 
     <owl:NamedIndividual rdf:about="http://viaf.org/viaf/143061561">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Place"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://viaf.org/</rdfs:isDefinedBy>
-        <skos:prefLabel xml:lang="en">Salzburg</skos:prefLabel>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Salzburg</skos:prefLabel>
     </owl:NamedIndividual>
     
 
@@ -1119,7 +1304,7 @@ One can prefer the shortcut:
     <owl:NamedIndividual rdf:about="http://viaf.org/viaf/148855657">
         <rdf:type rdf:resource="http://dbpedia.org/ontology/Place"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://viaf.org/</rdfs:isDefinedBy>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Hamburg</skos:prefLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hamburg</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1127,8 +1312,9 @@ One can prefer the shortcut:
     <!-- http://viaf.org/viaf/155870729 -->
 
     <owl:NamedIndividual rdf:about="http://viaf.org/viaf/155870729">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Place"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://viaf.org/</rdfs:isDefinedBy>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Vienna</skos:prefLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vienna</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1137,7 +1323,7 @@ One can prefer the shortcut:
 
     <owl:NamedIndividual rdf:about="http://viaf.org/viaf/176303863">
         <rdf:type rdf:resource="http://www.omac.org/work#MusicalWork"/>
-        <dbp:genre rdf:resource="http://www.omac.org/work#Chamber_Music_genre"/>
+        <dbp:genre rdf:resource="http://dbpedia.org/resource/Chamber_music"/>
         <dbp:key rdf:resource="http://dbpedia.org/resource/G_minor"/>
         <composed_by rdf:resource="http://viaf.org/viaf/7573295"/>
         <has_arrangement rdf:resource="http://www.omac.org/data#Piano_Quartet_Op_25_arrangement"/>
@@ -1149,8 +1335,7 @@ One can prefer the shortcut:
         <dbp:movements rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Four</dbp:movements>
         <dcterms:title rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Piano Quartet Op.25</dcterms:title>
         <rdfs:isDefinedBy xml:lang="en">http://viaf.org/</rdfs:isDefinedBy>
-        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Piano Quartet Op. 25</rdfs:label>
-        <skos:prefLabel xml:lang="en">Piano Quartet Op. 25</skos:prefLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Piano Quartet Op. 25</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1164,8 +1349,7 @@ One can prefer the shortcut:
         <dbp:composed rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1556</dbp:composed>
         <dcterms:title rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Missa Confitemini</dcterms:title>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://viaf.org/</rdfs:isDefinedBy>
-        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Missa confitemini</rdfs:label>
-        <skos:prefLabel xml:lang="lat">Missa confitemini</skos:prefLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missa confitemini</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1177,7 +1361,7 @@ One can prefer the shortcut:
         <dbp:firstname rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Pierre</dbp:firstname>
         <dbp:name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Pierre Colin</dbp:name>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://viaf.org/</rdfs:isDefinedBy>
-        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Pierre Colin</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pierre Colin</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1186,7 +1370,7 @@ One can prefer the shortcut:
 
     <owl:NamedIndividual rdf:about="http://viaf.org/viaf/294918919">
         <rdf:type rdf:resource="http://www.omac.org/work#MusicalWork"/>
-        <dbp:genre rdf:resource="http://www.omac.org/work#Symphony_genre"/>
+        <dbp:genre rdf:resource="http://dbpedia.org/resource/Symphony"/>
         <composed_by rdf:resource="http://viaf.org/viaf/32197206"/>
         <scored_for rdf:resource="http://www.omac.org/data#k385_performing_force1"/>
         <scored_for rdf:resource="http://www.omac.org/data#k385_performing_force2"/>
@@ -1215,8 +1399,7 @@ One can prefer the shortcut:
         <dcterms:title rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Missa o gente brunette</dcterms:title>
         <CRIM_identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">CRIM_Mass_0003</CRIM_identifier>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">http://viaf.org</rdfs:isDefinedBy>
-        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Missa o gente brunette</rdfs:label>
-        <skos:prefLabel xml:lang="lat">Missa o gente brunette</skos:prefLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Missa o gente brunette</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1243,8 +1426,8 @@ One can prefer the shortcut:
         <dbp:familyname rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">de Marle</dbp:familyname>
         <dbp:firstname rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Nicolas</dbp:firstname>
         <dbp:name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Nicolas de Marle</dbp:name>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">http://viaf.org/</rdfs:isDefinedBy>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Nicolas de Marle</skos:prefLabel>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://viaf.org/</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nicolas de Marle</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1261,8 +1444,7 @@ One can prefer the shortcut:
         <dbp:firstname rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Johannes</dbp:firstname>
         <dbp:name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Johannes Brahms</dbp:name>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://viaf.org/</rdfs:isDefinedBy>
-        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Johannes Brahms</rdfs:label>
-        <skos:prefLabel xml:lang="en">Johannes Brahms</skos:prefLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Johannes Brahms</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1270,6 +1452,7 @@ One can prefer the shortcut:
     <!-- http://www.omac.org/data#Agnus_dei_183088613 -->
 
     <owl:NamedIndividual rdf:about="http://www.omac.org/data#Agnus_dei_183088613">
+        <dbp:genre rdf:resource="http://dbpedia.org/resource/Agnus_Dei_(music)"/>
         <section_of rdf:resource="http://viaf.org/viaf/183088613"/>
     </owl:NamedIndividual>
     
@@ -1313,6 +1496,7 @@ One can prefer the shortcut:
     <!-- http://www.omac.org/data#Credo_183088613 -->
 
     <owl:NamedIndividual rdf:about="http://www.omac.org/data#Credo_183088613">
+        <dbp:genre rdf:resource="http://dbpedia.org/resource/Credo"/>
         <section_of rdf:resource="http://viaf.org/viaf/183088613"/>
     </owl:NamedIndividual>
     
@@ -1358,8 +1542,6 @@ One can prefer the shortcut:
         <has_subsection rdf:resource="http://www.omac.org/data#Kyrie_section1_313248912"/>
         <has_subsection rdf:resource="http://www.omac.org/data#Kyrie_section2_313248912"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Kyrie of Missa o gente brunette</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Kyrie</rdfs:label>
-        <skos:prefLabel xml:lang="lat">Kyrie</skos:prefLabel>
     </owl:NamedIndividual>
     
 
@@ -1385,9 +1567,8 @@ One can prefer the shortcut:
     <owl:NamedIndividual rdf:about="http://www.omac.org/data#Op_25_m1">
         <section_of rdf:resource="http://viaf.org/viaf/176303863"/>
         <movement_order rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</movement_order>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">First movement of Johannes Brahms&apos; Piano Quartet Op. 25</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Piano Quartet Op. 25, movement 1</rdfs:label>
-        <skos:prefLabel xml:lang="en">Piano Quartet Op. 25, movement 1</skos:prefLabel>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">First movement of Johannes Brahms&apos; Piano Quartet Op. 25</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Piano Quartet Op. 25, movement 1</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1397,7 +1578,7 @@ One can prefer the shortcut:
     <owl:NamedIndividual rdf:about="http://www.omac.org/data#Op_25_m2">
         <section_of rdf:resource="http://viaf.org/viaf/176303863"/>
         <movement_order rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</movement_order>
-        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Piano Quartet Op. 25, movement 2</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Piano Quartet Op. 25, movement 2</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1407,7 +1588,7 @@ One can prefer the shortcut:
     <owl:NamedIndividual rdf:about="http://www.omac.org/data#Op_25_m3">
         <section_of rdf:resource="http://viaf.org/viaf/176303863"/>
         <movement_order rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</movement_order>
-        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Piano Quartet Op. 25, movement 3</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Piano Quartet Op. 25, movement 3</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1417,7 +1598,7 @@ One can prefer the shortcut:
     <owl:NamedIndividual rdf:about="http://www.omac.org/data#Op_25_m4">
         <section_of rdf:resource="http://viaf.org/viaf/176303863"/>
         <movement_order rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</movement_order>
-        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Piano Quartet Op. 25, movement 4</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Piano Quartet Op. 25, movement 4</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1498,82 +1679,20 @@ One can prefer the shortcut:
     
 
 
-    <!-- http://www.omac.org/work#Baroque_style -->
-
-    <owl:NamedIndividual rdf:about="http://www.omac.org/work#Baroque_style">
-        <rdf:type rdf:resource="http://www.omac.org/work#StyleType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.omac.org/work#Chamber_Music_genre -->
-
-    <owl:NamedIndividual rdf:about="http://www.omac.org/work#Chamber_Music_genre">
-        <rdf:type rdf:resource="http://www.omac.org/work#GenreType"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.omac.org/work#Chanson_genre -->
 
     <owl:NamedIndividual rdf:about="http://www.omac.org/work#Chanson_genre">
         <rdf:type rdf:resource="http://www.omac.org/work#GenreType"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chanson genre</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.omac.org/work#Medieval_style -->
+    <!-- http://www.omac.org/work#Magnificat_genre -->
 
-    <owl:NamedIndividual rdf:about="http://www.omac.org/work#Medieval_style">
-        <rdf:type rdf:resource="http://www.omac.org/work#StyleType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.omac.org/work#Nocturne_genre -->
-
-    <owl:NamedIndividual rdf:about="http://www.omac.org/work#Nocturne_genre">
+    <owl:NamedIndividual rdf:about="http://www.omac.org/work#Magnificat_genre">
         <rdf:type rdf:resource="http://www.omac.org/work#GenreType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.omac.org/work#Prelude_genre -->
-
-    <owl:NamedIndividual rdf:about="http://www.omac.org/work#Prelude_genre">
-        <rdf:type rdf:resource="http://www.omac.org/work#GenreType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.omac.org/work#Renaissance_style -->
-
-    <owl:NamedIndividual rdf:about="http://www.omac.org/work#Renaissance_style">
-        <rdf:type rdf:resource="http://www.omac.org/work#StyleType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.omac.org/work#Sarabande_genre -->
-
-    <owl:NamedIndividual rdf:about="http://www.omac.org/work#Sarabande_genre">
-        <rdf:type rdf:resource="http://www.omac.org/work#GenreType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.omac.org/work#Sonata_genre -->
-
-    <owl:NamedIndividual rdf:about="http://www.omac.org/work#Sonata_genre">
-        <rdf:type rdf:resource="http://www.omac.org/work#GenreType"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.omac.org/work#Symphony_genre -->
-
-    <owl:NamedIndividual rdf:about="http://www.omac.org/work#Symphony_genre">
-        <rdf:type rdf:resource="http://www.omac.org/work#GenreType"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Magnificat genre</rdfs:label>
     </owl:NamedIndividual>
     
 
