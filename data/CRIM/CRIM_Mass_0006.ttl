@@ -9,18 +9,28 @@
 @prefix dbr: <http://dbpedia.org/resource/>.
 
 viaf:313248882
-  dcterms:title "Missa Je suis déshéritée"^^rdfs:Literal;
+  dcterms:title "Missa Je suis déshéritée"^^xsd:string;
   rdf:type ow:MusicalWork;
   ow:composed_by viaf:51955127;
   dbp:composed "1556"^^xsd:gYear;
   dbp:genre <http://dbpedia.org/resource/Mass_(music)>;
-  ow:CRIM_identifier "CRIM_Mass_0006"^^rdfs:Literal;
-  dbp:url "http://crimproject.org/masses/CRIM_Mass_0006/"^^xsd:anyURI;
+  #ow:CRIM_identifier "CRIM_Mass_0006"^^rdfs:Literal;
+  #dbp:url "http://crimproject.org/masses/CRIM_Mass_0006/"^^xsd:anyURI;
   ow:has_section od:Kyrie-313248882, od:Gloria-313248882, od:Credo-313248882, od:Sanctus-313248882, od:AgnusDei-313248882.
 
 
 viaf:51955127
    rdf:type ow:Composer;
-   dbp:firstname "Jean"^^rdfs:Literal;
-   dbp:familyname "Guyon"^^rdfs:Literal;
-   dbp:name "Jean Guyon"^^rdfs:Literal.
+   dbp:firstname "Jean"^^xsd:string;
+   dbp:familyname "Guyon"^^xsd:string;
+   dbp:name "Jean Guyon"^^xsd:string.
+
+od:Kyrie-313248882 dbp:genre dbr:Kyrie.
+
+od:Gloria-313248882 dbp:genre dbr:Gloria.
+
+od:Credo-313248882 dbp:genre dbr:Credo.
+
+od:Sanctus-313248882 dbp:genre dbr:Sanctus.
+
+od:AgnusDei-313248882 dbp:genre <http://dbpedia.org/resource/Agnus_Dei_(music)>.
