@@ -1,0 +1,29 @@
+@prefix ow:<http://www.omac.org/work#>.
+@prefix od:<http://www.omac.org/data#>.
+@prefix rdfs:<http://www.w3.org/2000/01/rdf-schema#>.
+#@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix viaf: <http://viaf.org/viaf/>.
+@prefix dbp: <http://dbpedia.org/property/>.
+@prefix dbr: <http://dbpedia.org/resource/>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+
+viaf:176303863
+    dcterms:title "Piano Quartet Op. 25"^^xsd:string;
+    ow:composed_by viaf:7573295;
+    dbp:composed "1856–1861"^^xsd:date;
+    ow:scored_for dbr:Viola, dbr:Violin, dbr:Cello, dbr:Piano.
+
+od:PQ_Op_25_arrangement
+    dcterms:title "Arrangement of Piano Quartet Op. 25"^^xsd:string;
+    ow:arrangement_of viaf:176303863;
+    ow:composed_by viaf:7573295;
+    ow:arranged_by viaf:12492826;
+    ow:arrangement_year "1937"^^xsd:gYear;
+    ow:scored_for ow:Orchestra.
+
+viaf:7573295
+  dbp:name "Johannes Brahms"^^xsd:string.
+
+viaf:12492826
+    dbp:name "Arnold Schoenberg"^^xsd:string.
