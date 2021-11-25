@@ -521,6 +521,7 @@ Via the short cut:
         <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Included in OMAC work module</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">http://dbpedia.org/property</rdfs:isDefinedBy>
         <skos:altLabel xml:lang="en">has number of movements</skos:altLabel>
+        <skos:altLabel xml:lang="en">has number of sections</skos:altLabel>
         <skos:prefLabel xml:lang="en">movements</skos:prefLabel>
     </owl:DatatypeProperty>
     
@@ -574,19 +575,19 @@ Via the short cut:
     
 
 
-    <!-- http://www.omac.org/work#movement_order -->
+    <!-- http://www.omac.org/work#number_performing_force -->
 
-    <owl:DatatypeProperty rdf:about="http://www.omac.org/work#movement_order">
-        <rdfs:domain rdf:resource="http://www.omac.org/work#MusicalEntity"/>
+    <owl:DatatypeProperty rdf:about="http://www.omac.org/work#number_performing_force">
+        <rdfs:domain rdf:resource="http://www.omac.org/work#PerformingForce"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Included in OMAC work module</rdfs:comment>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.omac.org/work#number_performing_force -->
+    <!-- http://www.omac.org/work#section_order -->
 
-    <owl:DatatypeProperty rdf:about="http://www.omac.org/work#number_performing_force">
-        <rdfs:domain rdf:resource="http://www.omac.org/work#PerformingForce"/>
+    <owl:DatatypeProperty rdf:about="http://www.omac.org/work#section_order">
+        <rdfs:domain rdf:resource="http://www.omac.org/work#MusicalEntity"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Included in OMAC work module</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -670,7 +671,7 @@ For instance:
 
 One can prefer the shortcut:
 - work1 :has_genre :genre_type.</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Attribute</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Attribute</rdfs:label>
         <skos:prefLabel xml:lang="en">Attribute</skos:prefLabel>
     </owl:Class>
     
@@ -1030,7 +1031,7 @@ One can prefer the shortcut:
         <rdf:type rdf:resource="http://www.omac.org/work#GenreType"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chamber music is a form of classical music that is composed for a small group of instruments—traditionally a group that could fit in a palace chamber or a large room. Most broadly, it includes any art music that is performed by a small number of performers, with one performer to a part (in contrast to orchestral music, in which each string part is played by a number of performers). However, by convention, it usually does not include solo instrument performances.</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/</rdfs:isDefinedBy>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chamber music</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chamber music genre</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1566,7 +1567,7 @@ One can prefer the shortcut:
 
     <owl:NamedIndividual rdf:about="http://www.omac.org/data#Op_25_m1">
         <section_of rdf:resource="http://viaf.org/viaf/176303863"/>
-        <movement_order rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</movement_order>
+        <section_order rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</section_order>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">First movement of Johannes Brahms&apos; Piano Quartet Op. 25</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Piano Quartet Op. 25, movement 1</rdfs:label>
     </owl:NamedIndividual>
@@ -1577,7 +1578,7 @@ One can prefer the shortcut:
 
     <owl:NamedIndividual rdf:about="http://www.omac.org/data#Op_25_m2">
         <section_of rdf:resource="http://viaf.org/viaf/176303863"/>
-        <movement_order rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</movement_order>
+        <section_order rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</section_order>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Piano Quartet Op. 25, movement 2</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1587,7 +1588,7 @@ One can prefer the shortcut:
 
     <owl:NamedIndividual rdf:about="http://www.omac.org/data#Op_25_m3">
         <section_of rdf:resource="http://viaf.org/viaf/176303863"/>
-        <movement_order rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</movement_order>
+        <section_order rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</section_order>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Piano Quartet Op. 25, movement 3</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1597,7 +1598,7 @@ One can prefer the shortcut:
 
     <owl:NamedIndividual rdf:about="http://www.omac.org/data#Op_25_m4">
         <section_of rdf:resource="http://viaf.org/viaf/176303863"/>
-        <movement_order rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</movement_order>
+        <section_order rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</section_order>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Piano Quartet Op. 25, movement 4</rdfs:label>
     </owl:NamedIndividual>
     
