@@ -1,0 +1,35 @@
+@prefix od: <http://www.omac.org/data#>.
+@prefix ow: <http://www.omac.org/work#>.
+@prefix oc: <http://www.omac.org/claim#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix dbp: <http://dbpedia.org/property/>.
+@prefix viaf: <http://viaf.org/viaf/>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+
+viaf:89469141 dbp:name "Claudin de Sermisy"^^xsd:string.
+
+viaf:180445237
+  dcterms:title "Missa tota pulchra es"^^xsd:string;
+  dbp:genre <http://dbpedia.org/resource/Mass_(music)>;
+  ow:composed_by viaf:89469141.
+
+od:Credo_180445237
+    ow:section_of viaf:180445237;
+    dcterms:title "Credo"^^xsd:string.
+
+od:pattern_P2
+     rdf:type oc:AnalyticPattern;
+     oc:analyzed_by od:Ian_Lorenz;
+     oc:identified_in od:Credo_180445237;
+     oc:schema oc:Fuga_schema;
+     oc:melodic_interval_of_entry "4-"^^rdfs:Literal;
+     oc:time_interval_of_entry "B2"^^rdfs:Literal;
+     oc:periodic "false"^^xsd:boolean;
+     oc:strict "false"^^xsd:boolean;
+     oc:flexed "false"^^xsd:boolean;
+     oc:sequential "false"^^xsd:boolean;
+     oc:inverted "false"^^xsd:boolean;
+     oc:retrograde "false"^^xsd:boolean;
+     oc:remarks "Makes up a longer ID"^^xsd:string.
