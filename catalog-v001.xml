@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1637753107494" name="http://www.omac.org/claim" uri="omac_claim.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1637753107494" name="http://www.omac.org/work" uri="omac_work.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1638876946810" name="http://www.omac.org/claim" uri="omac_claim.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1638876946810" name="http://www.omac.org/work" uri="omac_work.owl"/>
     </group>
 </catalog>
