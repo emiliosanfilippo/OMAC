@@ -4,6 +4,7 @@
      xmlns:ow="http://www.omac.org/work#"
      xmlns:dbo="http://dbpedia.org/ontology/"
      xmlns:dbp="http://dbpedia.org/property/"
+     xmlns:dbr="http://dbpedia.org/resource/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -12,6 +13,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:viaf="http://viaf.org/viaf/"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:dcterms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://www.omac.org/work">
