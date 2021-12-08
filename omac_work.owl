@@ -4,7 +4,6 @@
      xmlns:ow="http://www.omac.org/work#"
      xmlns:dbo="http://dbpedia.org/ontology/"
      xmlns:dbp="http://dbpedia.org/property/"
-     xmlns:dbr="http://dbpedia.org/resource/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -18,6 +17,9 @@
      xmlns:dcterms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://www.omac.org/work">
         <rdfs:comment>All data present in this file are intended for testing purposes only</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Developed by: Emilio M. Sanfilippo, Laboratory for Applied Ontology, ISTC-CNR, Italy
+
+Main domain expert involved: Richard Freedman, Haverford College, USA</rdfs:isDefinedBy>
         <owl:versionInfo>under development</owl:versionInfo>
     </owl:Ontology>
     
@@ -143,8 +145,8 @@
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.omac.org/work#Genre"/>
-                    <rdf:Description rdf:about="http://www.omac.org/work#GenreValue"/>
+                    <rdf:Description rdf:about="http://www.omac.org/work#GenreAttribute"/>
+                    <rdf:Description rdf:about="http://www.omac.org/work#GenreAttributeValue"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -163,8 +165,8 @@
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.omac.org/work#Key"/>
-                    <rdf:Description rdf:about="http://www.omac.org/work#KeyValue"/>
+                    <rdf:Description rdf:about="http://www.omac.org/work#KeyAttribute"/>
+                    <rdf:Description rdf:about="http://www.omac.org/work#KeyAttributeValue"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -315,8 +317,8 @@ Via the short cut:
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.omac.org/work#Style"/>
-                    <rdf:Description rdf:about="http://www.omac.org/work#StyleValue"/>
+                    <rdf:Description rdf:about="http://www.omac.org/work#StyleAttribute"/>
+                    <rdf:Description rdf:about="http://www.omac.org/work#StyleAttributeValue"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -359,8 +361,8 @@ Via the short cut:
     <!-- http://www.omac.org/work#performing_force_type -->
 
     <owl:ObjectProperty rdf:about="http://www.omac.org/work#performing_force_type">
-        <rdfs:domain rdf:resource="http://www.omac.org/work#PerformingForce"/>
-        <rdfs:range rdf:resource="http://www.omac.org/work#PerformingForceValue"/>
+        <rdfs:domain rdf:resource="http://www.omac.org/work#PerformingForceAttribute"/>
+        <rdfs:range rdf:resource="http://www.omac.org/work#PerformingForceAttributeValue"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Included in OMAC work module</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">performing force type</rdfs:label>
         <skos:prefLabel xml:lang="en">performing force type</skos:prefLabel>
@@ -376,8 +378,8 @@ Via the short cut:
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.omac.org/work#PerformingForce"/>
-                    <rdf:Description rdf:about="http://www.omac.org/work#PerformingForceValue"/>
+                    <rdf:Description rdf:about="http://www.omac.org/work#PerformingForceAttribute"/>
+                    <rdf:Description rdf:about="http://www.omac.org/work#PerformingForceAttributeValue"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -395,8 +397,8 @@ Via the short cut:
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.omac.org/work#PerformingForce"/>
-                    <rdf:Description rdf:about="http://www.omac.org/work#PerformingForceValue"/>
+                    <rdf:Description rdf:about="http://www.omac.org/work#PerformingForceAttribute"/>
+                    <rdf:Description rdf:about="http://www.omac.org/work#PerformingForceAttributeValue"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -577,10 +579,10 @@ Via the short cut:
     
 
 
-    <!-- http://www.omac.org/work#number_performing_force -->
+    <!-- http://www.omac.org/work#performing_force_quantity -->
 
-    <owl:DatatypeProperty rdf:about="http://www.omac.org/work#number_performing_force">
-        <rdfs:domain rdf:resource="http://www.omac.org/work#PerformingForce"/>
+    <owl:DatatypeProperty rdf:about="http://www.omac.org/work#performing_force_quantity">
+        <rdfs:domain rdf:resource="http://www.omac.org/work#PerformingForceAttribute"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Included in OMAC work module</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -711,32 +713,33 @@ One can however prefer the shortcut:
     
 
 
-    <!-- http://www.omac.org/work#Genre -->
+    <!-- http://www.omac.org/work#GenreAttribute -->
 
-    <owl:Class rdf:about="http://www.omac.org/work#Genre">
+    <owl:Class rdf:about="http://www.omac.org/work#GenreAttribute">
         <rdfs:subClassOf rdf:resource="http://www.omac.org/work#Attribute"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.omac.org/work#has_value"/>
-                <owl:someValuesFrom rdf:resource="http://www.omac.org/work#GenreValue"/>
+                <owl:someValuesFrom rdf:resource="http://www.omac.org/work#GenreAttributeValue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.omac.org/work#has_value"/>
-                <owl:allValuesFrom rdf:resource="http://www.omac.org/work#GenreValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.omac.org/work#GenreAttributeValue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Included in OMAC work module</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Genre</rdfs:label>
+        <skos:altLabel xml:lang="en">Genre Attribute</skos:altLabel>
         <skos:prefLabel xml:lang="en">Genre</skos:prefLabel>
     </owl:Class>
     
 
 
-    <!-- http://www.omac.org/work#GenreValue -->
+    <!-- http://www.omac.org/work#GenreAttributeValue -->
 
-    <owl:Class rdf:about="http://www.omac.org/work#GenreValue">
+    <owl:Class rdf:about="http://www.omac.org/work#GenreAttributeValue">
         <rdfs:subClassOf rdf:resource="http://www.omac.org/work#AttributeValue"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Included in OMAC work module</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Genre Value</rdfs:label>
@@ -745,32 +748,33 @@ One can however prefer the shortcut:
     
 
 
-    <!-- http://www.omac.org/work#Key -->
+    <!-- http://www.omac.org/work#KeyAttribute -->
 
-    <owl:Class rdf:about="http://www.omac.org/work#Key">
+    <owl:Class rdf:about="http://www.omac.org/work#KeyAttribute">
         <rdfs:subClassOf rdf:resource="http://www.omac.org/work#Attribute"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.omac.org/work#has_value"/>
-                <owl:someValuesFrom rdf:resource="http://www.omac.org/work#KeyValue"/>
+                <owl:someValuesFrom rdf:resource="http://www.omac.org/work#KeyAttributeValue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.omac.org/work#has_value"/>
-                <owl:allValuesFrom rdf:resource="http://www.omac.org/work#KeyValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.omac.org/work#KeyAttributeValue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Included in OMAC work module</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Key</rdfs:label>
+        <skos:altLabel xml:lang="en">Key Attribute</skos:altLabel>
         <skos:prefLabel xml:lang="en">Key</skos:prefLabel>
     </owl:Class>
     
 
 
-    <!-- http://www.omac.org/work#KeyValue -->
+    <!-- http://www.omac.org/work#KeyAttributeValue -->
 
-    <owl:Class rdf:about="http://www.omac.org/work#KeyValue">
+    <owl:Class rdf:about="http://www.omac.org/work#KeyAttributeValue">
         <rdfs:subClassOf rdf:resource="http://www.omac.org/work#AttributeValue"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Included in OMAC work module</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Key Value</rdfs:label>
@@ -786,6 +790,19 @@ One can however prefer the shortcut:
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.omac.org/work#composed_by"/>
                 <owl:someValuesFrom rdf:resource="http://www.omac.org/work#Composer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.omac.org/work#scored_for"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.omac.org/work#PerformingForceAttribute"/>
+                            <rdf:Description rdf:about="http://www.omac.org/work#PerformingForceAttributeValue"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -857,32 +874,34 @@ One can however prefer the shortcut:
     
 
 
-    <!-- http://www.omac.org/work#PerformingForce -->
+    <!-- http://www.omac.org/work#PerformingForceAttribute -->
 
-    <owl:Class rdf:about="http://www.omac.org/work#PerformingForce">
+    <owl:Class rdf:about="http://www.omac.org/work#PerformingForceAttribute">
         <rdfs:subClassOf rdf:resource="http://www.omac.org/work#Attribute"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.omac.org/work#has_value"/>
-                <owl:someValuesFrom rdf:resource="http://www.omac.org/work#PerformingForceValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.omac.org/work#PerformingForceAttributeValue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.omac.org/work#has_value"/>
-                <owl:allValuesFrom rdf:resource="http://www.omac.org/work#PerformingForceValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.omac.org/work#PerformingForceAttributeValue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Included in OMAC work module</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Performing Force</rdfs:label>
+        <skos:altLabel xml:lang="en">Performing Force Attribute</skos:altLabel>
         <skos:prefLabel xml:lang="en">Performing Force</skos:prefLabel>
     </owl:Class>
     
 
 
-    <!-- http://www.omac.org/work#PerformingForceValue -->
+    <!-- http://www.omac.org/work#PerformingForceAttributeValue -->
 
-    <owl:Class rdf:about="http://www.omac.org/work#PerformingForceValue">
+    <owl:Class rdf:about="http://www.omac.org/work#PerformingForceAttributeValue">
         <rdfs:subClassOf rdf:resource="http://www.omac.org/work#AttributeValue"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Included in OMAC work module</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Performing Force Value</rdfs:label>
@@ -915,32 +934,33 @@ One can however prefer the shortcut:
     
 
 
-    <!-- http://www.omac.org/work#Style -->
+    <!-- http://www.omac.org/work#StyleAttribute -->
 
-    <owl:Class rdf:about="http://www.omac.org/work#Style">
+    <owl:Class rdf:about="http://www.omac.org/work#StyleAttribute">
         <rdfs:subClassOf rdf:resource="http://www.omac.org/work#Attribute"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.omac.org/work#has_value"/>
-                <owl:someValuesFrom rdf:resource="http://www.omac.org/work#StyleValue"/>
+                <owl:someValuesFrom rdf:resource="http://www.omac.org/work#StyleAttributeValue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.omac.org/work#has_value"/>
-                <owl:allValuesFrom rdf:resource="http://www.omac.org/work#StyleValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.omac.org/work#StyleAttributeValue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Included in OMAC work module</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Style</rdfs:label>
+        <skos:altLabel xml:lang="en">Style Attribute</skos:altLabel>
         <skos:prefLabel xml:lang="en">Style</skos:prefLabel>
     </owl:Class>
     
 
 
-    <!-- http://www.omac.org/work#StyleValue -->
+    <!-- http://www.omac.org/work#StyleAttributeValue -->
 
-    <owl:Class rdf:about="http://www.omac.org/work#StyleValue">
+    <owl:Class rdf:about="http://www.omac.org/work#StyleAttributeValue">
         <rdfs:subClassOf rdf:resource="http://www.omac.org/work#AttributeValue"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Included in OMAC work module</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Style Value</rdfs:label>
@@ -1011,7 +1031,7 @@ One can however prefer the shortcut:
     <!-- http://dbpedia.org/resource/Baroque_music -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Baroque_music">
-        <rdf:type rdf:resource="http://www.omac.org/work#StyleValue"/>
+        <rdf:type rdf:resource="http://www.omac.org/work#StyleAttributeValue"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baroque music (UK: /bəˈrɒk/ or US: /bəˈroʊk/) is a period or style of Western classical music composed from approximately 1600 to 1750. This era followed the Renaissance music era, and was followed in turn by the Classical era, with the galant style marking the transition between Baroque and Classical eras. The Baroque period is divided into three major phases: early, middle, and late. Overlapping in time, they are conventionally dated from 1580 to 1650, from 1630 to 1700, and from 1680 to 1750. Baroque music forms a major portion of the &quot;classical music&quot; canon, and is now widely studied, performed, and listened to. The term &quot;baroque&quot; comes from the Portuguese word barroco, meaning &quot;misshapen pearl&quot;. Key composers of the Baroque era include Johann Sebastian Bach, Antonio Vivaldi, George Fr</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/</rdfs:isDefinedBy>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baroque music style</rdfs:label>
@@ -1022,7 +1042,7 @@ One can however prefer the shortcut:
     <!-- http://dbpedia.org/resource/Cello -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Cello">
-        <rdf:type rdf:resource="http://www.omac.org/work#PerformingForceValue"/>
+        <rdf:type rdf:resource="http://www.omac.org/work#PerformingForceAttributeValue"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/</rdfs:isDefinedBy>
     </owl:NamedIndividual>
     
@@ -1031,7 +1051,7 @@ One can however prefer the shortcut:
     <!-- http://dbpedia.org/resource/Chamber_music -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Chamber_music">
-        <rdf:type rdf:resource="http://www.omac.org/work#GenreValue"/>
+        <rdf:type rdf:resource="http://www.omac.org/work#GenreAttributeValue"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chamber music is a form of classical music that is composed for a small group of instruments—traditionally a group that could fit in a palace chamber or a large room. Most broadly, it includes any art music that is performed by a small number of performers, with one performer to a part (in contrast to orchestral music, in which each string part is played by a number of performers). However, by convention, it usually does not include solo instrument performances.</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/</rdfs:isDefinedBy>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chamber music genre</rdfs:label>
@@ -1042,7 +1062,7 @@ One can however prefer the shortcut:
     <!-- http://dbpedia.org/resource/Credo -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Credo">
-        <rdf:type rdf:resource="http://www.omac.org/work#GenreValue"/>
+        <rdf:type rdf:resource="http://www.omac.org/work#GenreAttributeValue"/>
         <rdfs:comment xml:lang="en">In Christian liturgy, the credo (Latin: [ˈkɾeːdoː]; Latin for &quot;I believe&quot;) is the Nicene-Constantinopolitan Creed – or its shorter and nowadays more used version, the Apostles&apos; Creed – in the Mass, either as a prayer, a spoken text, or sung as Gregorian chant or other musical settings of the Mass.</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/</rdfs:isDefinedBy>
         <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Credo genre</rdfs:label>
@@ -1050,10 +1070,18 @@ One can however prefer the shortcut:
     
 
 
+    <!-- http://dbpedia.org/resource/D_major -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/D_major">
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/</rdfs:isDefinedBy>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://dbpedia.org/resource/Flute -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Flute">
-        <rdf:type rdf:resource="http://www.omac.org/work#PerformingForceValue"/>
+        <rdf:type rdf:resource="http://www.omac.org/work#PerformingForceAttributeValue"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/</rdfs:isDefinedBy>
     </owl:NamedIndividual>
     
@@ -1062,7 +1090,7 @@ One can however prefer the shortcut:
     <!-- http://dbpedia.org/resource/G_minor -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/G_minor">
-        <rdf:type rdf:resource="http://www.omac.org/work#KeyValue"/>
+        <rdf:type rdf:resource="http://www.omac.org/work#KeyAttributeValue"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G minor is a minor scale based on G, consisting of the pitches G, A, B♭, C, D, E♭, and F. Its key signature has two flats. Its relative major is B-flat major and its parallel major is G major. The G natural minor scale is: Changes needed for the melodic and harmonic versions of the scale are written in with accidentals as necessary (source DBPedia)</rdfs:comment>
         <rdfs:isDefinedBy>http://dbpedia.org/resource/</rdfs:isDefinedBy>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G minor</rdfs:label>
@@ -1073,7 +1101,7 @@ One can however prefer the shortcut:
     <!-- http://dbpedia.org/resource/Gloria -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Gloria">
-        <rdf:type rdf:resource="http://www.omac.org/work#GenreValue"/>
+        <rdf:type rdf:resource="http://www.omac.org/work#GenreAttributeValue"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">http://dbpedia.org/resource/</rdfs:isDefinedBy>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gloria genre</rdfs:label>
     </owl:NamedIndividual>
@@ -1083,7 +1111,7 @@ One can however prefer the shortcut:
     <!-- http://dbpedia.org/resource/Hymn -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hymn">
-        <rdf:type rdf:resource="http://www.omac.org/work#GenreValue"/>
+        <rdf:type rdf:resource="http://www.omac.org/work#GenreAttributeValue"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A hymn is a type of song, usually religious, specifically written for the purpose of adoration or prayer, and typically addressed to a deity or deities, or to a prominent figure or personification. The word hymn derives from Greek ὕμνος (hymnos), which means &quot;a song of praise&quot;. A writer of hymns is known as a hymnist. The singing or composition of hymns is called hymnody. Collections of hymns are known as hymnals or hymn books. Hymns may or may not include instrumental accompaniment.</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Hymn</rdfs:isDefinedBy>
         <rdfs:label>Hymn genre</rdfs:label>
@@ -1094,7 +1122,7 @@ One can however prefer the shortcut:
     <!-- http://dbpedia.org/resource/Kyrie -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kyrie">
-        <rdf:type rdf:resource="http://www.omac.org/work#GenreValue"/>
+        <rdf:type rdf:resource="http://www.omac.org/work#GenreAttributeValue"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kyrie, a transliteration of Greek Κύριε, vocative case of Κύριος (Kyrios), is a common name of an important prayer of Christian liturgy, also called the Kyrie eleison (/ˈkɪəri.eɪ ɪˈleɪ.ɪsɒn, -sən/ KEER-ee-ay il-AY-iss-on, -⁠ən; Ancient Greek: Κύριε, ἐλέησον, romanized: Kýrie eléēson, lit. &apos;Lord, have mercy&apos;).</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/</rdfs:isDefinedBy>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kyrie genre</rdfs:label>
@@ -1105,7 +1133,7 @@ One can however prefer the shortcut:
     <!-- http://dbpedia.org/resource/Lied -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Lied">
-        <rdf:type rdf:resource="http://www.omac.org/work#GenreValue"/>
+        <rdf:type rdf:resource="http://www.omac.org/work#GenreAttributeValue"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/</rdfs:isDefinedBy>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lied genre</rdfs:label>
     </owl:NamedIndividual>
@@ -1115,7 +1143,7 @@ One can however prefer the shortcut:
     <!-- http://dbpedia.org/resource/Madrigal -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Madrigal">
-        <rdf:type rdf:resource="http://www.omac.org/work#GenreValue"/>
+        <rdf:type rdf:resource="http://www.omac.org/work#GenreAttributeValue"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A madrigal is a secular vocal music composition of the Renaissance (15th–16th c.) and early Baroque (1600–1750) eras. The polyphonic madrigal is unaccompanied, and the number of voices varies from two to eight, but usually features three to six voices, whilst the metre of the madrigal varies between two or three tercets, followed by one or two couplets. Unlike the verse-repeating strophic forms sung to the same music, most madrigals are through-composed, featuring different music for each stanza of lyrics, whereby the composer expresses the emotions contained in each line and in single words of the poem being sung.</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/</rdfs:isDefinedBy>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Madrigal genre</rdfs:label>
@@ -1126,7 +1154,7 @@ One can however prefer the shortcut:
     <!-- http://dbpedia.org/resource/Medieval_music -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Medieval_music">
-        <rdf:type rdf:resource="http://www.omac.org/work#StyleValue"/>
+        <rdf:type rdf:resource="http://www.omac.org/work#StyleAttributeValue"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Medieval music encompasses the sacred and secular music of the Western Europe during the Middle Ages, from approximately the 6th to 15th centuries. It is the first and longest era of Western classical music and followed by the Renaissance music; the two eras comprise what musicologists term as early music, preceding the common practice period. Following the traditional divisions of the Middle Ages, medieval music can be divided into , , and medieval music.</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/</rdfs:isDefinedBy>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Medieval music style</rdfs:label>
@@ -1137,7 +1165,7 @@ One can however prefer the shortcut:
     <!-- http://dbpedia.org/resource/Motet -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Motet">
-        <rdf:type rdf:resource="http://www.omac.org/work#GenreValue"/>
+        <rdf:type rdf:resource="http://www.omac.org/work#GenreAttributeValue"/>
         <rdfs:comment xml:lang="en">In Western classical music, a motet is mainly a vocal musical composition, of highly diverse form and style, from the high medieval music to the present. The motet was one of the pre-eminent polyphonic forms of Renaissance music. According to Margaret Bent, &quot;a piece of music in several parts with words&quot; is as precise a definition of the motet as will serve from the 13th to the late 16th century and beyond. The late 13th-century theorist Johannes de Grocheo believed that the motet was &quot;not to be celebrated in the presence of common people, because they do not notice its subtlety, nor are they delighted in hearing it, but in the presence of the educated and of those who are seeking out subtleties in the arts&quot;.</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Motet</rdfs:isDefinedBy>
         <rdfs:label>Motet genre</rdfs:label>
@@ -1148,7 +1176,7 @@ One can however prefer the shortcut:
     <!-- http://dbpedia.org/resource/Oboe -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Oboe">
-        <rdf:type rdf:resource="http://www.omac.org/work#PerformingForceValue"/>
+        <rdf:type rdf:resource="http://www.omac.org/work#PerformingForceAttributeValue"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/</rdfs:isDefinedBy>
     </owl:NamedIndividual>
     
@@ -1157,7 +1185,7 @@ One can however prefer the shortcut:
     <!-- http://dbpedia.org/resource/Orchestra -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Orchestra">
-        <rdf:type rdf:resource="http://www.omac.org/work#PerformingForceValue"/>
+        <rdf:type rdf:resource="http://www.omac.org/work#PerformingForceAttributeValue"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/</rdfs:isDefinedBy>
     </owl:NamedIndividual>
     
@@ -1166,7 +1194,7 @@ One can however prefer the shortcut:
     <!-- http://dbpedia.org/resource/Piano -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Piano">
-        <rdf:type rdf:resource="http://www.omac.org/work#PerformingForceValue"/>
+        <rdf:type rdf:resource="http://www.omac.org/work#PerformingForceAttributeValue"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/</rdfs:isDefinedBy>
     </owl:NamedIndividual>
     
@@ -1175,7 +1203,7 @@ One can however prefer the shortcut:
     <!-- http://dbpedia.org/resource/Plainsong -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Plainsong">
-        <rdf:type rdf:resource="http://www.omac.org/work#GenreValue"/>
+        <rdf:type rdf:resource="http://www.omac.org/work#GenreAttributeValue"/>
         <rdfs:comment xml:lang="en">Plainsong (calque from the French « plain-chant »; hence also plainchant; Latin: cantus planus) is a body of chants used in the liturgies of the Western Church. When referring to the term plainsong, it is those sacred pieces that are composed in Latin text. Plainsong was the exclusive form of Christian church music until the ninth century, and the introduction of polyphony The monophonic chants of plainsong have a non-metric rhythm. Their rhythms are generally freer than the metered rhythm of later Western music, and they are sung without musical accompaniment.</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/Plainsong</rdfs:isDefinedBy>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Plainsong genre</rdfs:label>
@@ -1187,7 +1215,7 @@ One can however prefer the shortcut:
     <!-- http://dbpedia.org/resource/Renaissance_music -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Renaissance_music">
-        <rdf:type rdf:resource="http://www.omac.org/work#StyleValue"/>
+        <rdf:type rdf:resource="http://www.omac.org/work#StyleAttributeValue"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Renaissance music is vocal and instrumental music written and performed in Europe during the Renaissance era. Consensus among music historians has been to start the era around 1400, with the end of the medieval era, and to close it around 1600, with the beginning of the Baroque period, therefore commencing the musical Renaissance about a hundred years after the beginning of the Renaissance as it is understood in other disciplines.</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/</rdfs:isDefinedBy>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Renaissance music style</rdfs:label>
@@ -1198,7 +1226,7 @@ One can however prefer the shortcut:
     <!-- http://dbpedia.org/resource/Sanctus -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Sanctus">
-        <rdf:type rdf:resource="http://www.omac.org/work#GenreValue"/>
+        <rdf:type rdf:resource="http://www.omac.org/work#GenreAttributeValue"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Sanctus (Latin: Sanctus, &quot;Holy&quot;) is a hymn in Christian liturgy. It may also be called the epinikios hymnos (Greek: ἐπινίκιος ὕμνος, &quot;Hymn of Victory&quot;) when referring to the Greek rendition. In Western Christianity, the Sanctus forms part of the Ordinary and is sung (or said) as the final words of the Preface of the Eucharistic Prayer of remembrance, consecration, and praise. The preface, which alters according to the season, usually concludes with words describing the praise of the worshippers joining with the angels, who are pictured as praising God with the words of the Sanctus.In the Byzantine Rite and general Eastern Orthodox Christianity, the Sanctus is offered as a response by the choir during the Holy Anaphora.</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/</rdfs:isDefinedBy>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sanctus genre</rdfs:label>
@@ -1209,7 +1237,7 @@ One can however prefer the shortcut:
     <!-- http://dbpedia.org/resource/Symphony -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Symphony">
-        <rdf:type rdf:resource="http://www.omac.org/work#GenreValue"/>
+        <rdf:type rdf:resource="http://www.omac.org/work#GenreAttributeValue"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A symphony is an extended musical composition in Western classical music, written by composers, most often for orchestra. Although the term has had many meanings from its origins in the ancient Greek era, by the late 18th century the word had taken on the meaning common today: a work usually consisting of multiple distinct sections or movements, often four, with the first movement in sonata form. Symphonies are almost always scored for an orchestra consisting of a string section (violin, viola, cello, and double bass), brass, woodwind, and percussion instruments which altogether number about 30 to 100 musicians. Symphonies are notated in a musical score, which contains all the instrument parts. Orchestral musicians play from parts which contain just the notated music for their own instrument. Some symphonies also contain vocal parts (e.g., Beethoven&apos;s Ninth Symphony). (en)</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/</rdfs:isDefinedBy>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Symphony genre</rdfs:label>
@@ -1220,7 +1248,7 @@ One can however prefer the shortcut:
     <!-- http://dbpedia.org/resource/Villancico -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Villancico">
-        <rdf:type rdf:resource="http://www.omac.org/work#GenreValue"/>
+        <rdf:type rdf:resource="http://www.omac.org/work#GenreAttributeValue"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The villancico (Spanish, pronounced [biʎanˈθiko]) or vilancete (Portuguese, pronounced [vi.lɐ̃ˈse.t(ɨ)]) was a common poetic and musical form of the Iberian Peninsula and Latin America popular from the late 15th to 18th centuries. With the decline in popularity of the villancicos in the 20th century, the term became reduced to mean merely &quot;Christmas carol&quot;. Important composers of villancicos were Juan del Encina, Pedro de Escobar, Francisco Guerrero, Manuel de Zumaya, Juana Inés de la Cruz, Gaspar Fernandes, and Juan Gutiérrez de Padilla.</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/</rdfs:isDefinedBy>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Villancico genre</rdfs:label>
@@ -1231,7 +1259,7 @@ One can however prefer the shortcut:
     <!-- http://dbpedia.org/resource/Viola -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Viola">
-        <rdf:type rdf:resource="http://www.omac.org/work#PerformingForceValue"/>
+        <rdf:type rdf:resource="http://www.omac.org/work#PerformingForceAttributeValue"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/</rdfs:isDefinedBy>
     </owl:NamedIndividual>
     
@@ -1240,7 +1268,7 @@ One can however prefer the shortcut:
     <!-- http://dbpedia.org/resource/Violin -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Violin">
-        <rdf:type rdf:resource="http://www.omac.org/work#PerformingForceValue"/>
+        <rdf:type rdf:resource="http://www.omac.org/work#PerformingForceAttributeValue"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/</rdfs:isDefinedBy>
     </owl:NamedIndividual>
     
@@ -1249,7 +1277,7 @@ One can however prefer the shortcut:
     <!-- http://dbpedia.org/resource/Agnus_Dei_(music) -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Agnus_Dei_(music)">
-        <rdf:type rdf:resource="http://www.omac.org/work#GenreValue"/>
+        <rdf:type rdf:resource="http://www.omac.org/work#GenreAttributeValue"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Agnus Dei is the Latin name under which the &quot;Lamb of God&quot; is honoured within the Roman Catholic Mass and, by extension, other Christian liturgies descending from the Latin tradition. It is the name given to a specific prayer that occurs in these liturgies, and is the name given to the music pieces that accompany the text of this prayer. The use of the title &quot;Lamb of God&quot; in liturgy is based on John 1:29, in which St. John the Baptist, upon seeing Jesus, proclaims &quot;Behold, the Lamb of God, who takes away the sin of the world!&quot;</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/</rdfs:isDefinedBy>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Agnus dei genre</rdfs:label>
@@ -1260,7 +1288,7 @@ One can however prefer the shortcut:
     <!-- http://dbpedia.org/resource/Mass_(music) -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mass_(music)">
-        <rdf:type rdf:resource="http://www.omac.org/work#GenreValue"/>
+        <rdf:type rdf:resource="http://www.omac.org/work#GenreAttributeValue"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Mass (Latin: missa), a form of sacred musical composition, is a choral composition that sets the invariable portions of the Eucharistic liturgy (principally that of the Catholic Church, the Anglican Communion, and Lutheranism) to music. Musical Masses take their name from the Catholic liturgy called &quot;the Mass&quot;. Masses can be a cappella, that is, without an independent accompaniment, or they can be accompanied by instrumental obbligatos up to and including a full orchestra. Many masses, especially later ones, were never intended to be performed during the celebration of an actual mass.</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dbpedia.org/resource/</rdfs:isDefinedBy>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mass genre</rdfs:label>
@@ -1271,7 +1299,7 @@ One can however prefer the shortcut:
     <!-- http://fr.dbpedia.org/resource/Cantate_chorale -->
 
     <owl:NamedIndividual rdf:about="http://fr.dbpedia.org/resource/Cantate_chorale">
-        <rdf:type rdf:resource="http://www.omac.org/work#GenreValue"/>
+        <rdf:type rdf:resource="http://www.omac.org/work#GenreAttributeValue"/>
         <rdfs:comment xml:lang="en">In music, a chorale cantata is a sacred composition for voices and instruments, principally from the German Baroque era, in which the organizing principle is the words and music to a chorale. Usually a chorale cantata is in multiple movements or parts. Most chorale cantatas were written between approximately 1650 and 1750. By far the most famous are by J. S. Bach, especially the cantatas composed in his second annual cycle of cantatas, started in Leipzig in 1724.</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://fr.dbpedia.org/resource/</rdfs:isDefinedBy>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cantate chorale genre</rdfs:label>
@@ -1666,9 +1694,9 @@ One can however prefer the shortcut:
     <!-- http://www.omac.org/data#k385_performing_force1 -->
 
     <owl:NamedIndividual rdf:about="http://www.omac.org/data#k385_performing_force1">
-        <rdf:type rdf:resource="http://www.omac.org/work#PerformingForce"/>
+        <rdf:type rdf:resource="http://www.omac.org/work#PerformingForceAttribute"/>
         <performing_force_type rdf:resource="http://dbpedia.org/resource/Oboe"/>
-        <number_performing_force rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</number_performing_force>
+        <performing_force_quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</performing_force_quantity>
     </owl:NamedIndividual>
     
 
@@ -1676,9 +1704,9 @@ One can however prefer the shortcut:
     <!-- http://www.omac.org/data#k385_performing_force2 -->
 
     <owl:NamedIndividual rdf:about="http://www.omac.org/data#k385_performing_force2">
-        <rdf:type rdf:resource="http://www.omac.org/work#PerformingForce"/>
+        <rdf:type rdf:resource="http://www.omac.org/work#PerformingForceAttribute"/>
         <performing_force_type rdf:resource="http://dbpedia.org/resource/Flute"/>
-        <number_performing_force rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</number_performing_force>
+        <performing_force_quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</performing_force_quantity>
     </owl:NamedIndividual>
     
 
@@ -1686,7 +1714,7 @@ One can however prefer the shortcut:
     <!-- http://www.omac.org/work#Chanson_genre -->
 
     <owl:NamedIndividual rdf:about="http://www.omac.org/work#Chanson_genre">
-        <rdf:type rdf:resource="http://www.omac.org/work#GenreValue"/>
+        <rdf:type rdf:resource="http://www.omac.org/work#GenreAttributeValue"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chanson genre</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1695,7 +1723,7 @@ One can however prefer the shortcut:
     <!-- http://www.omac.org/work#Magnificat_genre -->
 
     <owl:NamedIndividual rdf:about="http://www.omac.org/work#Magnificat_genre">
-        <rdf:type rdf:resource="http://www.omac.org/work#GenreValue"/>
+        <rdf:type rdf:resource="http://www.omac.org/work#GenreAttributeValue"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Magnificat genre</rdfs:label>
     </owl:NamedIndividual>
     
