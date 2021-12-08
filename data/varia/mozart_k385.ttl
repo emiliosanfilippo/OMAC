@@ -13,14 +13,15 @@ viaf:294918919
     rdf:type ow:MusicalWork;
     ow:composed_by viaf:32197206;
     dbp:genre dbr:Symphony;
+    dbp:key dbr:D_major;
     dbp:composed "1782"^^xsd:gYear;
     ow:scored_for od:performing_force1;
     ow:scored_for od:performing_force2.
 
 viaf:32197206
 dbp:name "Wolfgang Amadeus Mozart"^^xsd:string;
-dbp:firstname "Wolfgang Amadeus"^^xsd:string;
-dbp:familyname "Mozart"^^xsd:string;
+#dbp:firstname "Wolfgang Amadeus"^^xsd:string;
+#dbp:familyname "Mozart"^^xsd:string;
 dbp:birthDate "1756-01-27"^^xsd:date;
 dbp:deathDate "1791-12-05"^^xsd:date.
 
