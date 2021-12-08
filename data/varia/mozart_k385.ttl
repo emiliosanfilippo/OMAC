@@ -20,18 +20,16 @@ viaf:294918919
 
 viaf:32197206
 dbp:name "Wolfgang Amadeus Mozart"^^xsd:string;
-#dbp:firstname "Wolfgang Amadeus"^^xsd:string;
-#dbp:familyname "Mozart"^^xsd:string;
 dbp:birthDate "1756-01-27"^^xsd:date;
 dbp:deathDate "1791-12-05"^^xsd:date.
 
 
 od:performing_force1
-    rdf:type ow:PerformingForce;
+    rdf:type ow:PerformingForceAttribute;
     ow:performing_force_type dbr:Oboe;
     ow:number_performing_forces "Two".
 
 od:performing_force2
-        rdf:type ow:PerformingForce;
+        rdf:type ow:PerformingForceAttribute;
         ow:performing_force_type dbr:Flute;
         ow:number_performing_forces "Two".

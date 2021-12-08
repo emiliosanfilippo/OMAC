@@ -1,6 +1,5 @@
 @prefix ow:<http://www.omac.org/work#>.
 @prefix od:<http://www.omac.org/data#>.
-@prefix rdfs:<http://www.w3.org/2000/01/rdf-schema#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix viaf: <http://viaf.org/viaf/>.
 @prefix dcterms: <http://purl.org/dc/terms/>.
@@ -12,17 +11,15 @@ viaf:176303863
     rdf:type ow:MusicalWork;
     dcterms:title "Piano Quartet Op. 25"^^xsd:string;
     ow:composed_by viaf:7573295;
-    dbp:movements "Four"^^xsd:string;
+    ow:sections_number "4"^^xsd:int;
     ow:has_section od:Op_25_m1, od:Op_25_m2, od:Op_25_m3, od:Op_25_m4;
     dbp:genre dbr:Chamber_music;
     dbp:key dbr:G_minor;
-    dbp:composed "1856–1861"^^rdfs:Literal;
+    dbp:composed "1856–1861";
     ow:scored_for dbr:Viola, dbr:Violin, dbr:Cello, dbr:Piano.
 
 viaf:7573295
        dbp:name "Johannes Brahms"^^xsd:string;
-       dbp:firstname "Johannes"^^xsd:string;
-       dbp:familyname "Brahms"^^xsd:string;
        dbp:birthDate "1833-05-07"^^xsd:date;
        dbp:deathDate "1897-04-03"^^xsd:date.
 
