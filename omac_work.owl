@@ -518,19 +518,6 @@ Via the short cut:
     
 
 
-    <!-- http://dbpedia.org/property/movements -->
-
-    <owl:DatatypeProperty rdf:about="http://dbpedia.org/property/movements">
-        <rdfs:domain rdf:resource="http://www.omac.org/work#MusicalEntity"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Included in OMAC work module</rdfs:comment>
-        <rdfs:isDefinedBy xml:lang="en">http://dbpedia.org/property</rdfs:isDefinedBy>
-        <skos:altLabel xml:lang="en">has number of movements</skos:altLabel>
-        <skos:altLabel xml:lang="en">has number of sections</skos:altLabel>
-        <skos:prefLabel xml:lang="en">movements</skos:prefLabel>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://dbpedia.org/property/name -->
 
     <owl:DatatypeProperty rdf:about="http://dbpedia.org/property/name">
@@ -593,6 +580,15 @@ Via the short cut:
     <owl:DatatypeProperty rdf:about="http://www.omac.org/work#section_order">
         <rdfs:domain rdf:resource="http://www.omac.org/work#MusicalEntity"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Included in OMAC work module</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.omac.org/work#sections_number -->
+
+    <owl:DatatypeProperty rdf:about="http://www.omac.org/work#sections_number">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Included in the OMAC Work module</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has number of sections</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1364,8 +1360,8 @@ One can however prefer the shortcut:
         <scored_for rdf:resource="http://dbpedia.org/resource/Viola"/>
         <scored_for rdf:resource="http://dbpedia.org/resource/Violin"/>
         <dbp:composed>1856–1861</dbp:composed>
-        <dbp:movements rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</dbp:movements>
         <dcterms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Piano Quartet Op.25</dcterms:title>
+        <sections_number rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</sections_number>
         <rdfs:isDefinedBy xml:lang="en">http://viaf.org/</rdfs:isDefinedBy>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Piano Quartet Op. 25</rdfs:label>
     </owl:NamedIndividual>
