@@ -21,16 +21,22 @@ viaf:313248882
 
 viaf:51955127
    rdf:type ow:Composer;
-   dbp:firstname "Jean"^^xsd:string;
-   dbp:familyname "Guyon"^^xsd:string;
+   #dbp:firstname "Jean"^^xsd:string;
+   #dbp:familyname "Guyon"^^xsd:string;
    dbp:name "Jean Guyon"^^xsd:string.
 
-od:Kyrie-313248882 dbp:genre dbr:Kyrie.
+od:Kyrie-313248882
+dbp:genre dbr:Kyrie;
+ow:has_subsection od:Kyrie1_313248882, od:Christe_313248882, od:Kyrie2_313248882.
 
 od:Gloria-313248882 dbp:genre dbr:Gloria.
 
 od:Credo-313248882 dbp:genre dbr:Credo.
 
-od:Sanctus-313248882 dbp:genre dbr:Sanctus.
+od:Sanctus-313248882
+dbp:genre dbr:Sanctus;
+od:has_subsection od:Sanctus_section_313248882, od:PleniSunt_313248882, od:Osanna_313248882, od:Benedictus_313248882.
 
-od:AgnusDei-313248882 dbp:genre <http://dbpedia.org/resource/Agnus_Dei_(music)>.
+od:AgnusDei-313248882
+dbp:genre <http://dbpedia.org/resource/Agnus_Dei_(music)>;
+ow:has_subsection od:AgnusDei1_313248882 , od:AgnusDei2_313248882.
