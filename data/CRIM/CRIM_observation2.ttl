@@ -1,7 +1,6 @@
 @prefix od: <http://www.omac.org/data#>.
 @prefix ow: <http://www.omac.org/work#>.
 @prefix oc: <http://www.omac.org/claim#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix dbp: <http://dbpedia.org/property/>.
@@ -12,20 +11,27 @@ viaf:89469141 dbp:name "Claudin de Sermisy"^^xsd:string.
 
 viaf:180445237
   dcterms:title "Missa tota pulchra es"^^xsd:string;
-  dbp:genre <http://dbpedia.org/resource/Mass_(music)>;
   ow:composed_by viaf:89469141.
 
 od:Credo_180445237
     ow:section_of viaf:180445237;
-    dcterms:title "Credo"^^xsd:string.
+    dcterms:title "Missa tota pulchra es:Credo"^^xsd:string.
 
-od:pattern_P2
-     rdf:type oc:AnalyticPattern;
-     oc:analyzed_by od:Ian_Lorenz;
-     oc:identified_in od:Credo_180445237;
+od:analytic_segment_P2
+    rdf:type oc:AnalyticSegment;
+    oc:analytic_segment_of od:Credo_180445237;
+    oc:ema "1-6/1,1,1+3,1+3,3,3/@1-4,@1-3,@1-3+@1-4,@1-3+@1-3,@1-3,@1"^^xsd:string.
+    #reference to this specific ema code is only for testing purposes
+
+od:claim_analytic_segment_P2
+     rdf:type oc:AnalyticSegmentClaim;
+     oc:stated_by od:Ian_Lorenz;
+     oc:refers_to od:analytic_segment_P2;
+     oc:refers_to od:Credo_180445237;
+     oc:refers_to viaf:180445237;
      oc:schema oc:Fuga_schema;
-     oc:melodic_interval_of_entry "4-"^^rdfs:Literal;
-     oc:time_interval_of_entry "B2"^^rdfs:Literal;
+     oc:melodic_interval_of_entry "4-"^^xsd:string;
+     oc:time_interval_of_entry "B2"^^xsd:string;
      oc:periodic "false"^^xsd:boolean;
      oc:strict "false"^^xsd:boolean;
      oc:flexed "false"^^xsd:boolean;

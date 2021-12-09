@@ -1,7 +1,6 @@
 @prefix od: <http://www.omac.org/data#>.
 @prefix ow: <http://www.omac.org/work#>.
 @prefix oc: <http://www.omac.org/claim#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix dbp: <http://dbpedia.org/property/>.
@@ -26,9 +25,13 @@ od:Tota_pulchra_es
     ow:composed_by viaf:89469141;
     oc:model_for od:Credo_180445237.
 
+od:claim_R1
+  rdf:type oc:Claim;
+  oc:refers_to od:relationship_R1;
+  oc:stated_by od:Ian_Lorenz.
+
 od:relationship_R1
     rdf:type oc:Quotation;
-    oc:analyzed_by od:Ian_Lorenz;
     oc:has_model od:Tota_pulchra_es;
     oc:has_derivative od:Credo_180445237;
     oc:exact "true"^^xsd:boolean;

@@ -1,7 +1,6 @@
 @prefix od: <http://www.omac.org/data#>.
 @prefix ow: <http://www.omac.org/work#>.
 @prefix oc: <http://www.omac.org/claim#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix dbp: <http://dbpedia.org/property/>.
@@ -14,13 +13,14 @@ od:Tota_pulchra_es
     ow:composed_by viaf:89469141;
     dcterms:title "Tota pulchra es"^^xsd:string.
 
-od:pattern_P1
-     rdf:type oc:AnalyticPattern;
-     oc:claimed_by od:Ian_Lorenz;
-     oc:identified_in od:Tota_pulchra_es;
+od:claim_analytic_segment_P1
+     rdf:type oc:AnalyticSegmentClaim;
+     oc:stated_by od:Ian_Lorenz;
+     oc:refers_to od:analytic_segment_P1;
+     oc:refers_to od:Tota_pulchra_es;
      oc:schema oc:Fuga_schema;
-     oc:melodic_interval_of_entry "4-"^^rdfs:Literal;
-     oc:time_interval_of_entry "B2"^^rdfs:Literal;
+     oc:melodic_interval_of_entry "4-"^^xsd:string;
+     oc:time_interval_of_entry "B2"^^xsd:string;
      oc:periodic "false"^^xsd:boolean;
      oc:strict "false"^^xsd:boolean;
      oc:flexed "false"^^xsd:boolean;
@@ -28,3 +28,9 @@ od:pattern_P1
      oc:inverted "false"^^xsd:boolean;
      oc:retrograde "false"^^xsd:boolean;
      oc:remarks "Makes up a longer ID"^^xsd:string.
+
+od:analytic_segment_P1
+    rdf:type oc:AnalyticSegment;
+    oc:analytic_segment_of od:Tota_pulchra_es;
+    oc:ema "1-6/1,1,1-2,1-2,2,2/@1,@1-3,@1-3+@1,@1-3+@1-3,@1-3,@1"^^xsd:string.
+    #reference to this specific ema code is only for testing purposes
