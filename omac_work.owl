@@ -16,10 +16,10 @@
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:dcterms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://www.omac.org/work">
-        <rdfs:comment>All data present in this file are intended for testing purposes only</rdfs:comment>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Developed by: Emilio M. Sanfilippo, Laboratory for Applied Ontology, ISTC-CNR, Italy
-
-Main domain expert involved: Richard Freedman, Haverford College, USA</rdfs:isDefinedBy>
+        <dcterms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Emilio M. Sanfilippo, Laboratory for Applied Ontology, ISTC-CNR, Italy
+Richard Freedman, Haverford College, USA</dcterms:creator>
+        <dcterms:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Music and Musicology</dcterms:subject>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">All data present in this file are intended for testing purposes only and will be removed in the final release of the ontology</rdfs:comment>
         <owl:versionInfo>under development</owl:versionInfo>
     </owl:Ontology>
     
@@ -33,6 +33,22 @@ Main domain expert involved: Richard Freedman, Haverford College, USA</rdfs:isDe
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator">
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/dc/terms/</rdfs:isDefinedBy>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/subject -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/subject">
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/dc/terms/</rdfs:isDefinedBy>
+    </owl:AnnotationProperty>
     
 
 
@@ -235,6 +251,7 @@ Via the short cut:
     <!-- http://www.omac.org/work#authorial_part_of -->
 
     <owl:ObjectProperty rdf:about="http://www.omac.org/work#authorial_part_of">
+        <rdfs:subPropertyOf rdf:resource="http://www.omac.org/work#part_of"/>
         <owl:inverseOf rdf:resource="http://www.omac.org/work#has_authorial_part"/>
         <rdfs:domain rdf:resource="http://www.omac.org/work#MusicalWorkPart"/>
         <rdfs:range rdf:resource="http://www.omac.org/work#MusicalEntity"/>
@@ -286,6 +303,7 @@ Via the short cut:
     <!-- http://www.omac.org/work#has_authorial_part -->
 
     <owl:ObjectProperty rdf:about="http://www.omac.org/work#has_authorial_part">
+        <rdfs:subPropertyOf rdf:resource="http://www.omac.org/work#has_part"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="http://www.omac.org/work#MusicalEntity"/>
         <rdfs:range rdf:resource="http://www.omac.org/work#MusicalWorkPart"/>
@@ -293,6 +311,16 @@ Via the short cut:
         <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Included in OMAC work module</rdfs:comment>
         <rdfs:comment xml:lang="en">The relation is used to represent the structure of musical entities, e.g., a symphony composed of movements and sections.</rdfs:comment>
         <skos:prefLabel xml:lang="en">has authorial part</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.omac.org/work#has_part -->
+
+    <owl:ObjectProperty rdf:about="http://www.omac.org/work#has_part">
+        <owl:inverseOf rdf:resource="http://www.omac.org/work#part_of"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has part</rdfs:label>
+        <skos:prefLabel xml:lang="en">has part</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -354,6 +382,17 @@ Via the short cut:
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Included in OMAC work module</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has value</rdfs:label>
         <skos:prefLabel xml:lang="en">has value</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.omac.org/work#part_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.omac.org/work#part_of">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">part of</rdfs:label>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">part of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -837,9 +876,9 @@ One can however prefer the shortcut:
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.omac.org/work#MusicalWorkPart"/>
-        <rdfs:comment xml:lang="en">Experts tend to refer to a whole entity (i.e., an entity with possibly multiple authorial parts) with the expression &apos;musical work&apos;. This is the reason why we distinguish between Musical Work Part and Musical Work</rdfs:comment>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Included in OMAC work module</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Musical Work</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Experts tend to refer to a whole entity (i.e., an entity with possibly multiple authorial parts) with the expression &apos;musical work&apos;. This is the reason why we distinguish between Musical Work Part and Musical Work</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Included in OMAC work module</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Musical Work</rdfs:label>
         <skos:prefLabel xml:lang="en">Musical Work</skos:prefLabel>
     </owl:Class>
     
@@ -863,8 +902,8 @@ One can however prefer the shortcut:
                 <owl:someValuesFrom rdf:resource="http://www.omac.org/work#MusicalWork"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Included in OMAC work module</rdfs:comment>
-        <rdfs:label xml:lang="en">Musical Work Part</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Included in OMAC work module</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Musical Work Part</rdfs:label>
         <skos:prefLabel xml:lang="en">Musical Work Part</skos:prefLabel>
     </owl:Class>
     
@@ -923,8 +962,8 @@ One can however prefer the shortcut:
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.omac.org/work#Subsection"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Included in OMAC work module</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Section</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Included in OMAC work module</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Section</rdfs:label>
         <skos:prefLabel xml:lang="en">Section</skos:prefLabel>
     </owl:Class>
     
@@ -1005,9 +1044,9 @@ One can however prefer the shortcut:
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Included in OMAC work module</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Included in OMAC work module</rdfs:comment>
         <rdfs:comment>Subsections are the smallest parts of musical works which can not be further decomposed in authorial musical entities</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Subsection</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subsection</rdfs:label>
         <skos:prefLabel xml:lang="en">Subsection</skos:prefLabel>
     </owl:Class>
     
