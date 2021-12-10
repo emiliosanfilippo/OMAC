@@ -25,7 +25,7 @@ od:Tota_pulchra_es
     ow:composed_by viaf:89469141;
     oc:model_for od:Credo_180445237.
 
-od:claim_R1
+od:similarity_claim_R1
   rdf:type oc:SimilarityClaim;
   oc:refers_to od:relationship_R1;
   oc:stated_by od:Ian_Lorenz.
