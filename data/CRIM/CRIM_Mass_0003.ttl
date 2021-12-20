@@ -14,25 +14,30 @@ viaf:313248912
     ow:composed_by viaf:44485735;
     dbp:composed "1568"^^xsd:gYear;
     dbp:genre <http://dbpedia.org/resource/Mass_(music)>;
-    ow:has_section od:Kyrie_313248912, od:Gloria_313248912, od:Credo_313248912, od:Sanctus_313248912, od:AgnusDei_313248912.
-    #ow:CRIM_identifier "CRIM_Mass_0003"^^xsd:string;
-    #dbp:url "http://crimproject.org/masses/CRIM_Mass_0003/"^^xsd:anyURI.
+    ow:has_section od:Kyrie_MissaBrunette, od:Gloria_MissaBrunette, od:Credo_MissaBrunette, od:Sanctus_MissaBrunette, od:AgnusDei_MissaBrunette.
 
-od:Kyrie_313248912
+od:Kyrie_MissaBrunette
+ow:order "1"^^xsd:int;
 dbp:genre dbr:Kyrie;
-ow:has_subsection od:Kyrie1_313248912, od:Christe_313248912, od:Kyrie2_313248912.
+ow:has_subsection od:Kyrie1_MissaBrunette, od:Christe_MissaBrunette, od:Kyrie2_MissaBrunette.
 
-od:Gloria_313248912 dbp:genre dbr:Gloria.
+od:Gloria_MissaBrunette
+  ow:order "2"^^xsd:int;
+  dbp:genre dbr:Gloria.
 
-od:Credo_313248912 dbp:genre dbr:Credo.
+od:Credo_MissaBrunette
+  ow:order "3"^^xsd:int;
+    dbp:genre dbr:Credo.
 
-od:Sanctus_313248912
+od:Sanctus_MissaBrunette
+  ow:order "4"^^xsd:int;
 dbp:genre dbr:Sanctus;
-od:has_subsection od:Sanctus_section_313248912, od:PleniSunt_313248912, od:Osanna_313248912, od:Benedictus_313248912.
+od:has_subsection od:Sanctus_section_MissaBrunette, od:PleniSunt_MissaBrunette, od:Osanna_MissaBrunette, od:Benedictus_MissaBrunette.
 
-od:AgnusDei_313248912
+od:AgnusDei_MissaBrunette
+  ow:order "5"^^xsd:int; 
 dbp:genre <http://dbpedia.org/resource/Agnus_Dei_(music)>;
-ow:has_subsection od:AgnusDei1_313248912, od:AgnusDei2_313248912.
+ow:has_subsection od:AgnusDei1_MissaBrunette, od:AgnusDei2_MissaBrunette.
 
 viaf:44485735
 rdf:type ow:Composer;

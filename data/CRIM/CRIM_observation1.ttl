@@ -10,6 +10,7 @@
 viaf:89469141 dbp:name "Claudin de Sermisy"^^xsd:string.
 
 od:Tota_pulchra_es
+    dbp:genre Chanson_genre;
     ow:composed_by viaf:89469141;
     dcterms:title "Tota pulchra es"^^xsd:string.
 
@@ -33,4 +34,4 @@ od:analytic_segment_P1
     rdf:type oc:AnalyticSegment;
     oc:analytic_segment_of od:Tota_pulchra_es;
     oc:ema "1-6/1,1,1-2,1-2,2,2/@1,@1-3,@1-3+@1,@1-3+@1-3,@1-3,@1"^^xsd:string.
-    #reference to this specific ema code is only for testing purposes
+    #reference to this specific ema code is for testing purposes, needs improvements

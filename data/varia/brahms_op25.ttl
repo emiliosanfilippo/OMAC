@@ -19,9 +19,11 @@ viaf:176303863
     ow:scored_for dbr:Viola, dbr:Violin, dbr:Cello, dbr:Piano.
 
 viaf:7573295
-       dbp:name "Johannes Brahms"^^xsd:string;
-       dbp:birthDate "1833-05-07"^^xsd:date;
-       dbp:deathDate "1897-04-03"^^xsd:date.
+  dbp:firstname "Johannes"^^xsd:string;
+  dbp:familyname "Brahms"^^xsd:string;
+  dbp:name "Johannes Brahms"^^xsd:string;
+  dbp:birthDate "1833-05-07"^^xsd:date;
+  dbp:deathDate "1897-04-03"^^xsd:date.
 
 od:Op_25_m1 ow:section_order "1"^^xsd:int.
 od:Op_25_m2 ow:section_order "2"^^xsd:int.

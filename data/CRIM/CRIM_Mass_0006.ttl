@@ -16,27 +16,34 @@ viaf:313248882
   dbp:genre <http://dbpedia.org/resource/Mass_(music)>;
   #ow:CRIM_identifier "CRIM_Mass_0006"^^rdfs:Literal;
   #dbp:url "http://crimproject.org/masses/CRIM_Mass_0006/"^^xsd:anyURI;
-  ow:has_section od:Kyrie-313248882, od:Gloria-313248882, od:Credo-313248882, od:Sanctus-313248882, od:AgnusDei-313248882.
+  ow:has_section od:Kyrie-MissaJeSuisDéshéritée, od:Gloria-MissaJeSuisDéshéritée, od:Credo-MissaJeSuisDéshéritée, od:Sanctus-MissaJeSuisDéshéritée, od:AgnusDei-MissaJeSuisDéshéritée.
 
 
 viaf:51955127
    rdf:type ow:Composer;
-   #dbp:firstname "Jean"^^xsd:string;
-   #dbp:familyname "Guyon"^^xsd:string;
+   dbp:firstname "Jean"^^xsd:string;
+   dbp:familyname "Guyon"^^xsd:string;
    dbp:name "Jean Guyon"^^xsd:string.
 
-od:Kyrie-313248882
-dbp:genre dbr:Kyrie;
-ow:has_subsection od:Kyrie1_313248882, od:Christe_313248882, od:Kyrie2_313248882.
+od:Kyrie-MissaJeSuisDéshéritée
+  dbp:genre dbr:Kyrie;
+  ow:section_order "1"^^xsd:int;
+  ow:has_subsection od:Kyrie1_MissaJeSuisDéshéritée, od:Christe_MissaJeSuisDéshéritée, od:Kyrie2_MissaJeSuisDéshéritée.
 
-od:Gloria-313248882 dbp:genre dbr:Gloria.
+od:Gloria-MissaJeSuisDéshéritée
+  dbp:genre dbr:Gloria;
+  ow:section_order "2"^^xsd:int.
 
-od:Credo-313248882 dbp:genre dbr:Credo.
+od:Credo-MissaJeSuisDéshéritée
+  dbp:genre dbr:Credo;
+  ow:section_order "3"^^xsd:int.
 
-od:Sanctus-313248882
-dbp:genre dbr:Sanctus;
-od:has_subsection od:Sanctus_section_313248882, od:PleniSunt_313248882, od:Osanna_313248882, od:Benedictus_313248882.
+od:Sanctus-MissaJeSuisDéshéritée
+  ow:section_order "4"^^xsd:int;
+  dbp:genre dbr:Sanctus;
+  od:has_subsection od:Sanctus_section_MissaJeSuisDéshéritée, od:PleniSunt_MissaJeSuisDéshéritée, od:Osanna_MissaJeSuisDéshéritée, od:Benedictus_MissaJeSuisDéshéritée.
 
-od:AgnusDei-313248882
-dbp:genre <http://dbpedia.org/resource/Agnus_Dei_(music)>;
-ow:has_subsection od:AgnusDei1_313248882 , od:AgnusDei2_313248882.
+od:AgnusDei-MissaJeSuisDéshéritée
+  ow:section_order "5"^^xsd:int;
+  dbp:genre <http://dbpedia.org/resource/Agnus_Dei_(music)>;
+  ow:has_subsection od:AgnusDei1_MissaJeSuisDéshéritée, od:AgnusDei2_MissaJeSuisDéshéritée.
