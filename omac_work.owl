@@ -605,20 +605,25 @@ Via the short cut:
     
 
 
-    <!-- http://www.omac.org/work#performing_force_quantity -->
+    <!-- http://www.omac.org/work#number_performing_force -->
 
-    <owl:DatatypeProperty rdf:about="http://www.omac.org/work#performing_force_quantity">
+    <owl:DatatypeProperty rdf:about="http://www.omac.org/work#number_performing_force">
         <rdfs:domain rdf:resource="http://www.omac.org/work#PerformingForceAttribute"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Included in OMAC work module</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Included in OMAC work module</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">number of performing force</rdfs:label>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This relation is used to represent the number of performing forces per type. For example, Mozart&apos;s Symphony No. 35 has 2 Oboes</skos:definition>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.omac.org/work#section_order -->
+    <!-- http://www.omac.org/work#order -->
 
-    <owl:DatatypeProperty rdf:about="http://www.omac.org/work#section_order">
+    <owl:DatatypeProperty rdf:about="http://www.omac.org/work#order">
         <rdfs:domain rdf:resource="http://www.omac.org/work#MusicalEntity"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Included in OMAC work module</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Included in OMAC work module</rdfs:comment>
+        <rdfs:label xml:lang="en">order</rdfs:label>
+        <skos:altLabel xml:lang="en">authorial part order</skos:altLabel>
+        <skos:definition xml:lang="en">The relation is used to represent the order of an authorial part (i.e., section or subsection) in a musical work. For example, a section of genre Kyrie is the first part of masses</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -628,6 +633,15 @@ Via the short cut:
     <owl:DatatypeProperty rdf:about="http://www.omac.org/work#sections_number">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Included in the OMAC Work module</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has number of sections</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.omac.org/work#subsections_number -->
+
+    <owl:DatatypeProperty rdf:about="http://www.omac.org/work#subsections_number">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Included in OMAC work module</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subsections number</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -924,6 +938,13 @@ One can however prefer the shortcut:
                 <owl:onProperty rdf:resource="http://www.omac.org/work#has_value"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onClass rdf:resource="http://www.omac.org/work#PerformingForceAttributeValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.omac.org/work#number_performing_force"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Included in OMAC work module</rdfs:comment>
@@ -1633,7 +1654,7 @@ One can however prefer the shortcut:
 
     <owl:NamedIndividual rdf:about="http://www.omac.org/data#Op_25_m1">
         <section_of rdf:resource="http://viaf.org/viaf/176303863"/>
-        <section_order rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</section_order>
+        <order rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</order>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">First movement of Johannes Brahms&apos; Piano Quartet Op. 25</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Piano Quartet Op. 25, movement 1</rdfs:label>
     </owl:NamedIndividual>
@@ -1644,7 +1665,7 @@ One can however prefer the shortcut:
 
     <owl:NamedIndividual rdf:about="http://www.omac.org/data#Op_25_m2">
         <section_of rdf:resource="http://viaf.org/viaf/176303863"/>
-        <section_order rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</section_order>
+        <order rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</order>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Piano Quartet Op. 25, movement 2</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1654,7 +1675,7 @@ One can however prefer the shortcut:
 
     <owl:NamedIndividual rdf:about="http://www.omac.org/data#Op_25_m3">
         <section_of rdf:resource="http://viaf.org/viaf/176303863"/>
-        <section_order rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</section_order>
+        <order rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</order>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Piano Quartet Op. 25, movement 3</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1664,7 +1685,7 @@ One can however prefer the shortcut:
 
     <owl:NamedIndividual rdf:about="http://www.omac.org/data#Op_25_m4">
         <section_of rdf:resource="http://viaf.org/viaf/176303863"/>
-        <section_order rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</section_order>
+        <order rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</order>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Piano Quartet Op. 25, movement 4</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1731,7 +1752,7 @@ One can however prefer the shortcut:
     <owl:NamedIndividual rdf:about="http://www.omac.org/data#k385_performing_force1">
         <rdf:type rdf:resource="http://www.omac.org/work#PerformingForceAttribute"/>
         <performing_force_type rdf:resource="http://dbpedia.org/resource/Oboe"/>
-        <performing_force_quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</performing_force_quantity>
+        <number_performing_force rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</number_performing_force>
     </owl:NamedIndividual>
     
 
@@ -1741,7 +1762,7 @@ One can however prefer the shortcut:
     <owl:NamedIndividual rdf:about="http://www.omac.org/data#k385_performing_force2">
         <rdf:type rdf:resource="http://www.omac.org/work#PerformingForceAttribute"/>
         <performing_force_type rdf:resource="http://dbpedia.org/resource/Flute"/>
-        <performing_force_quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</performing_force_quantity>
+        <number_performing_force rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</number_performing_force>
     </owl:NamedIndividual>
     
 
