@@ -14,6 +14,7 @@ viaf:313248912
     ow:composed_by viaf:44485735;
     dbp:composed "1568"^^xsd:gYear;
     dbp:genre <http://dbpedia.org/resource/Mass_(music)>;
+    ow:sections_number "5";
     ow:has_section od:Kyrie_MissaBrunette, od:Gloria_MissaBrunette, od:Credo_MissaBrunette, od:Sanctus_MissaBrunette, od:AgnusDei_MissaBrunette.
 
 od:Kyrie_MissaBrunette
@@ -32,10 +33,10 @@ od:Credo_MissaBrunette
 od:Sanctus_MissaBrunette
   ow:order "4"^^xsd:int;
 dbp:genre dbr:Sanctus;
-od:has_subsection od:Sanctus_section_MissaBrunette, od:PleniSunt_MissaBrunette, od:Osanna_MissaBrunette, od:Benedictus_MissaBrunette.
+od:has_subsection od:Sanctus_ss_MissaBrunette, od:PleniSunt_MissaBrunette, od:Osanna_MissaBrunette, od:Benedictus_MissaBrunette.
 
 od:AgnusDei_MissaBrunette
-  ow:order "5"^^xsd:int; 
+  ow:order "5"^^xsd:int;
 dbp:genre <http://dbpedia.org/resource/Agnus_Dei_(music)>;
 ow:has_subsection od:AgnusDei1_MissaBrunette, od:AgnusDei2_MissaBrunette.
 
