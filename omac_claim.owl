@@ -644,14 +644,21 @@ https://sites.google.com/haverford.edu/crim-project/vocabularies</rdfs:isDefined
     <owl:Class rdf:about="http://www.omac.org/claim#Claim">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.omac.org/claim#stated_by"/>
-                <owl:someValuesFrom rdf:resource="http://dbpedia.org/ontology/Person"/>
+                <owl:onProperty rdf:resource="http://www.omac.org/claim#refers_to"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://dbpedia.org/ontology/Person"/>
+                            <rdf:Description rdf:about="http://www.omac.org/work#MusicalEntity"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.omac.org/claim#stated_by"/>
-                <owl:allValuesFrom rdf:resource="http://dbpedia.org/ontology/Person"/>
+                <owl:someValuesFrom rdf:resource="http://www.omac.org/claim#Analyst"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.omac.org/work#Attribute"/>
@@ -660,6 +667,24 @@ https://sites.google.com/haverford.edu/crim-project/vocabularies</rdfs:isDefined
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Included in OMAC claim module</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Claim</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.omac.org/claim#Claim"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.omac.org/claim#refers_to"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://dbpedia.org/ontology/Person"/>
+                            <rdf:Description rdf:about="http://www.omac.org/work#MusicalEntity"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <rdfs:comment>This axioms provides a first characterization of the Claim class; it needs to be refined according to more precise application requirements</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -667,6 +692,7 @@ https://sites.google.com/haverford.edu/crim-project/vocabularies</rdfs:isDefined
 
     <owl:Class rdf:about="http://www.omac.org/claim#MechanicalTransformation">
         <rdfs:subClassOf rdf:resource="http://www.omac.org/claim#Transformation"/>
+        <skos:altLabel xml:lang="en">Mechanical Transformation Claim</skos:altLabel>
     </owl:Class>
     
 
@@ -675,6 +701,7 @@ https://sites.google.com/haverford.edu/crim-project/vocabularies</rdfs:isDefined
 
     <owl:Class rdf:about="http://www.omac.org/claim#NewMaterial">
         <rdfs:subClassOf rdf:resource="http://www.omac.org/claim#SimilarityClaim"/>
+        <skos:altLabel xml:lang="en">New Material Claim</skos:altLabel>
     </owl:Class>
     
 
@@ -683,6 +710,7 @@ https://sites.google.com/haverford.edu/crim-project/vocabularies</rdfs:isDefined
 
     <owl:Class rdf:about="http://www.omac.org/claim#NonMechanicalTransformation">
         <rdfs:subClassOf rdf:resource="http://www.omac.org/claim#Transformation"/>
+        <skos:altLabel xml:lang="en">Non-Mechanical Transformation Claim</skos:altLabel>
     </owl:Class>
     
 
@@ -691,6 +719,7 @@ https://sites.google.com/haverford.edu/crim-project/vocabularies</rdfs:isDefined
 
     <owl:Class rdf:about="http://www.omac.org/claim#Omission">
         <rdfs:subClassOf rdf:resource="http://www.omac.org/claim#SimilarityClaim"/>
+        <skos:altLabel xml:lang="en">Omission Claim</skos:altLabel>
     </owl:Class>
     
 
@@ -699,6 +728,7 @@ https://sites.google.com/haverford.edu/crim-project/vocabularies</rdfs:isDefined
 
     <owl:Class rdf:about="http://www.omac.org/claim#Quotation">
         <rdfs:subClassOf rdf:resource="http://www.omac.org/claim#SimilarityClaim"/>
+        <skos:altLabel xml:lang="en">Quotation Claim</skos:altLabel>
     </owl:Class>
     
 
@@ -707,6 +737,7 @@ https://sites.google.com/haverford.edu/crim-project/vocabularies</rdfs:isDefined
 
     <owl:Class rdf:about="http://www.omac.org/claim#QuotationExact">
         <rdfs:subClassOf rdf:resource="http://www.omac.org/claim#Quotation"/>
+        <skos:altLabel xml:lang="en">Quotation Exact Claim</skos:altLabel>
     </owl:Class>
     
 
@@ -715,6 +746,7 @@ https://sites.google.com/haverford.edu/crim-project/vocabularies</rdfs:isDefined
 
     <owl:Class rdf:about="http://www.omac.org/claim#QuotationMonnayage">
         <rdfs:subClassOf rdf:resource="http://www.omac.org/claim#Quotation"/>
+        <skos:altLabel xml:lang="en">Quotation Monnayage Claim</skos:altLabel>
     </owl:Class>
     
 
@@ -832,6 +864,7 @@ https://sites.google.com/haverford.edu/crim-project/vocabularies</rdfs:isDefined
 
     <owl:Class rdf:about="http://www.omac.org/claim#SelfEnchainment">
         <rdfs:subClassOf rdf:resource="http://www.omac.org/claim#SelfRelationship"/>
+        <skos:altLabel xml:lang="en">Self Enchainment Claim</skos:altLabel>
     </owl:Class>
     
 
@@ -840,6 +873,7 @@ https://sites.google.com/haverford.edu/crim-project/vocabularies</rdfs:isDefined
 
     <owl:Class rdf:about="http://www.omac.org/claim#SelfRelationship">
         <rdfs:subClassOf rdf:resource="http://www.omac.org/claim#SimilarityClaim"/>
+        <skos:altLabel xml:lang="en">Selfrelationship Claim</skos:altLabel>
     </owl:Class>
     
 
@@ -848,6 +882,7 @@ https://sites.google.com/haverford.edu/crim-project/vocabularies</rdfs:isDefined
 
     <owl:Class rdf:about="http://www.omac.org/claim#SelfRepetition">
         <rdfs:subClassOf rdf:resource="http://www.omac.org/claim#SelfRelationship"/>
+        <skos:altLabel xml:lang="en">Self Repetition Claim</skos:altLabel>
     </owl:Class>
     
 
@@ -856,6 +891,7 @@ https://sites.google.com/haverford.edu/crim-project/vocabularies</rdfs:isDefined
 
     <owl:Class rdf:about="http://www.omac.org/claim#SelfReturn">
         <rdfs:subClassOf rdf:resource="http://www.omac.org/claim#SelfRelationship"/>
+        <skos:altLabel xml:lang="en">Self Return Claim</skos:altLabel>
     </owl:Class>
     
 
@@ -1026,6 +1062,7 @@ https://sites.google.com/haverford.edu/crim-project/vocabularies</rdfs:isDefined
 
     <owl:Class rdf:about="http://www.omac.org/claim#Transformation">
         <rdfs:subClassOf rdf:resource="http://www.omac.org/claim#SimilarityClaim"/>
+        <skos:altLabel xml:lang="en">Transformation Claim</skos:altLabel>
     </owl:Class>
     
 
