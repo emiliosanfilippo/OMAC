@@ -19,24 +19,20 @@ od:Credo_180445237
       dcterms:title "Credo"^^xsd:string;
       ow:section_of viaf:180445237;
       oc:derivative_of od:Tota_pulchra_es.
-      #the last triple can be derived by reasoning over the ontology; it is here added for the sake of clarity.
+      #the last triple can be derived by reasoning over the ontology; it is here added for the sake of clarity/testing purposes.
 
 
 od:Tota_pulchra_es
     dcterms:title "Tota pulchra es"^^xsd:string;
     ow:composed_by viaf:89469141;
     oc:model_for od:Credo_180445237.
-    #the last triple can be derived by reasoning over the ontology; it is here added for the sake of clarity.
-
-od:rel_R1
-  rdf:type oc:Quotation;
-  oc:has_model od:Tota_pulchra_es;
-  oc:has_derivative od:Credo_180445237.
+    #the last triple can be derived by reasoning over the ontology; it is here added for the sake of clarity/testing purposes.
 
 
 od:claim_rel_R1
-  rdf:type oc:SimilarityClaim;
-  oc:refers_to od:rel_R1;
+  rdf:type oc:Quotation;
+  oc:has_model od:Tota_pulchra_es;
+  oc:has_derivative od:Credo_180445237;
   oc:stated_by od:Ian_Lorenz;
   oc:exact "true"^^xsd:boolean;
   oc:monnayage "false"^^xsd:boolean.
