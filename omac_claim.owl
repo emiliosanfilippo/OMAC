@@ -36,6 +36,22 @@ Richard Freedman, Haverford College, USA</terms:creator>
     
 
 
+    <!-- http://www.omac.org/claim#analyzed_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.omac.org/claim#analyzed_by">
+        <owl:inverseOf rdf:resource="http://www.omac.org/claim#analyzes"/>
+        <rdfs:domain rdf:resource="http://www.omac.org/work#MusicalEntity"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.omac.org/claim#analyzes -->
+
+    <owl:ObjectProperty rdf:about="http://www.omac.org/claim#analyzes"/>
+    
+
+
     <!-- http://www.omac.org/claim#attributedAuthor -->
 
     <owl:ObjectProperty rdf:about="http://www.omac.org/claim#attributedAuthor">
@@ -590,10 +606,18 @@ https://sites.google.com/haverford.edu/crim-project/vocabularies</rdfs:isDefined
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://dbpedia.org/ontology/Person"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.omac.org/claim#states"/>
-                        <owl:someValuesFrom rdf:resource="http://www.omac.org/claim#Claim"/>
-                    </owl:Restriction>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.omac.org/claim#analyzes"/>
+                                <owl:someValuesFrom rdf:resource="http://www.omac.org/work#MusicalEntity"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.omac.org/claim#states"/>
+                                <owl:someValuesFrom rdf:resource="http://www.omac.org/claim#Claim"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -622,6 +646,12 @@ https://sites.google.com/haverford.edu/crim-project/vocabularies</rdfs:isDefined
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.omac.org/claim#analyzed_by"/>
+                <owl:someValuesFrom rdf:resource="http://dbpedia.org/ontology/Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An analytic segment is a pattern of a musical work or musical work part identified by an analyst. It is not therefore an authorial part of a musical work</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Analytic Segment</rdfs:label>
         <skos:prefLabel xml:lang="en">Analytic Segment</skos:prefLabel>
@@ -658,7 +688,7 @@ https://sites.google.com/haverford.edu/crim-project/vocabularies</rdfs:isDefined
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.omac.org/claim#stated_by"/>
-                <owl:someValuesFrom rdf:resource="http://www.omac.org/claim#Analyst"/>
+                <owl:someValuesFrom rdf:resource="http://dbpedia.org/ontology/Person"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.omac.org/work#Attribute"/>
@@ -1392,6 +1422,7 @@ https://sites.google.com/haverford.edu/crim-project/vocabularies</rdfs:isDefined
 
     <owl:NamedIndividual rdf:about="http://www.omac.org/data#segment_P1">
         <rdf:type rdf:resource="http://www.omac.org/claim#AnalyticSegment"/>
+        <analyzed_by rdf:resource="http://www.omac.org/data#Ian_Lorenz"/>
         <segment_of rdf:resource="http://www.omac.org/data#Tota_pulchra_es"/>
     </owl:NamedIndividual>
     
