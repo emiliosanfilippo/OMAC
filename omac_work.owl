@@ -19,7 +19,7 @@
         <dcterms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Emilio M. Sanfilippo, Laboratory for Applied Ontology, ISTC-CNR, Italy
 Richard Freedman, Haverford College, USA</dcterms:creator>
         <dcterms:subject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Music and Musicology</dcterms:subject>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">All data present in this file are intended for testing purposes only and will be removed in the final release of the ontology</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Some of the instances present in this file are intended for testing purposes</rdfs:comment>
         <owl:versionInfo>under development</owl:versionInfo>
     </owl:Ontology>
     
