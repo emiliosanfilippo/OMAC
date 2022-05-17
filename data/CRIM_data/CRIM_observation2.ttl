@@ -19,12 +19,10 @@ od:Credo_180445237
 
 od:analytic_segment_P2
     rdf:type oc:AnalyticSegment;
-    oc:analytic_segment_of od:Credo_180445237.
-  # oc:ema "1-6/1,1,1+3,1+3,3,3/@1-4,@1-3,@1-3+@1-4,@1-3+@1-3,@1-3,@1"^^xsd:string.
-    #reference to this specific ema code is only for testing purposes
+    oc:segment_of od:Credo_180445237.
 
-od:claim_analytic_segment_P2
-     rdf:type oc:SchemaClaim;
+od:claim_P2
+     rdf:type oc:StructuralClaim;
      oc:stated_by od:Ian_Lorenz;
      oc:refers_to od:analytic_segment_P2;
      oc:refers_to od:Credo_180445237;#can be inferred, included here for testing

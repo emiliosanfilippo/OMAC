@@ -31,4 +31,4 @@ od:claim_P1
 
 od:segment_P1
     rdf:type oc:AnalyticSegment;
-    oc:analytic_segment_of od:Tota_pulchra_es.
+    oc:segment_of od:Tota_pulchra_es.
