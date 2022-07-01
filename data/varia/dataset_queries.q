@@ -1,3 +1,5 @@
+# NEEDS TO BE UPDATED
+
 ########## Query Q1 ###########
 
 PREFIX viaf: <http://viaf.org/viaf/>
