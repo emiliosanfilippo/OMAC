@@ -2,7 +2,9 @@ omac_work.obda
 omac_work.q
 omac_work.properties
 omac_claim.properties
+onto-testing
 ricercar_test1
 .DS_Store
 data/.DS_Store
-onto-testing
+data/varia/dataset_queries.q
+data/varia/dataset.ttl

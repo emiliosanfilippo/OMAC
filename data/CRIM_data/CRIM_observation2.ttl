@@ -22,12 +22,12 @@ od:analytic_segment_P2
     oc:segment_of od:Credo_180445237.
 
 od:claim_P2
-     rdf:type oc:StructuralClaim;
+     rdf:type oc:StructureClaim;
      oc:stated_by od:Ian_Lorenz;
      oc:refers_to od:analytic_segment_P2;
      oc:refers_to od:Credo_180445237;#can be inferred, included here for testing
      oc:refers_to viaf:180445237;##can be inferred, included here for testing
-     oc:schema oc:Fuga_schema;
+     oc:has_schema oc:Fuga_schema;
      oc:melodic_interval_of_entry "4-"^^xsd:string;
      oc:time_interval_of_entry "B2"^^xsd:string;
      oc:periodic "false"^^xsd:boolean;

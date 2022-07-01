@@ -14,11 +14,11 @@ od:Tota_pulchra_es
     dcterms:title "Tota pulchra es"^^xsd:string.
 
 od:claim_P1
-     rdf:type oc:StructuralClaim;
+     rdf:type oc:StructureClaim;
      oc:stated_by od:Ian_Lorenz;
      oc:refers_to od:segment_P1;
      oc:refers_to od:Tota_pulchra_es; #this triple can be inferred; it is here included for the sake of example.
-     oc:schema oc:Fuga_schema;
+     oc:has_schema oc:Fuga_schema;
      oc:melodic_interval_of_entry "4-"^^xsd:string;
      oc:time_interval_of_entry "B2"^^xsd:string;
      oc:periodic "false"^^xsd:boolean;
