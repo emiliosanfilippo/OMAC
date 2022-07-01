@@ -5,6 +5,6 @@ omac_claim.properties
 onto-testing
 ricercar_test1
 .DS_Store
-data/.DS_Store
-data/varia/dataset_queries.q
-data/varia/dataset.ttl
+/data/.DS_Store
+/data/varia/dataset_queries.q
+/data/varia/dataset.ttl
